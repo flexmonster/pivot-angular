@@ -1,8 +1,8 @@
-# Flexmonster Pivot table component integration with Angular 4 framework
+# Flexmonster Pivot table component integration with Angular 4+ framework
 [![Flexmonster Pivot table component](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](http://flexmonster.com)
 Website: www.flexmonster.com
 
-This repository holds the TypeScript source code for simple AngularJS 4 and Flexmonster Pivot table component project. It is based on [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html).
+This repository holds the TypeScript source code for simple Angular 4+ and Flexmonster Pivot table component project. It is created using [Angular CLI](https://cli.angular.io/).
 
 ## Prerequisites
 
@@ -16,32 +16,3 @@ by running `node -v` and `npm -v` in a terminal/console window.
 Older versions produce errors.
 
 We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
-
-## Create a new project based on this sample
-
-Clone this repo into new project folder (e.g., `my-proj`).
-```bash
-git clone  https://github.com/flexmonster/pivot-angularjs4  my-proj
-cd my-proj
-```
-
-Also, you can simply download .zip archive with the sample. 
-
-## Install npm packages
-
-> See npm and nvm version notes above
-
-Install the npm packages described in the `package.json` and verify that it works:
-
-```bash
-npm install
-npm start
-```
-
-The `npm start` command first compiles the application, 
-then simultaneously re-compiles and runs the `lite-server`.
-Both the compiler and the server watch for file changes.
-
-Shut it down manually with `Ctrl-C`.
-
-You're ready to write your application.
