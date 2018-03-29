@@ -1,0 +1,13 @@
+<h1>Material Tabs Example</h1>
+<mat-tab-group #tabs (selectedTabChange)="onTabChange(tabs.selectedIndex)">
+  <mat-tab label="Tab 1">
+    <fm-pivot #pivot1 [componentFolder]="'https://cdn.flexmonster.com/'" [toolbar]="true" [width]="'100%'" [height]="500" [licenseKey]="'Z7YW-XD181C-5E0I1O-2N5O3I'">
+      Flexmonster will appear here
+    </fm-pivot>
+  </mat-tab>
+  <mat-tab label="Tab 2">
+    <fm-pivot #pivot2 [componentFolder]="'https://cdn.flexmonster.com/'" [toolbar]="true" [width]="'100%'" [height]="500" [licenseKey]="'Z7YW-XD181C-5E0I1O-2N5O3I'">
+      Flexmonster will appear here
+    </fm-pivot>
+  </mat-tab>
+</mat-tab-group>

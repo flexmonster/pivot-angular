@@ -1,0 +1,11 @@
+<h1>Angular 4/Flexmonster</h1>
+<fm-pivot #pivot 
+  [componentFolder]="'https://cdn.flexmonster.com/'"
+  [toolbar]="true" 
+  [width]="'100%'" 
+  [height]="500" 
+  [report]="pivotReport"
+  [customizeCell]="onCustomizeCell"
+  (ready)="onPivotReady($event)"
+  (reportcomplete)="onReportComplete($event)">
+</fm-pivot>
