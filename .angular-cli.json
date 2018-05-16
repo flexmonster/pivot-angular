@@ -19,9 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/flexmonster/flexmonster.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/flexmonster/flexmonster.full.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
