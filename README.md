@@ -16,3 +16,8 @@ by running `node -v` and `npm -v` in a terminal/console window.
 Older versions produce errors.
 
 We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
+
+## Installation & Usage
+
+Please refer to [Flexmonster Integration with Angular](https://www.flexmonster.com/doc/integration-with-angular-4/) tutorial.
+
