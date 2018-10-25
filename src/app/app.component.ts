@@ -34,7 +34,7 @@ export class AppComponent {
     console.log("[ready] FlexmonsterPivot", this.pivot);
   }
 
-  onCustomizeCell(cell: Flexmonster.CellBuilder, data: Flexmonster.Cell): void {
+  onCustomizeCell(cell: Flexmonster.CellBuilder, data: Flexmonster.CellData): void {
     //console.log("[customizeCell] FlexmonsterPivot");
     if (data.isClassicTotalRow) cell.addClass("fm-total-classic-r");
     if (data.isGrandTotalRow) cell.addClass("fm-grand-total-r");
