@@ -1,4 +1,4 @@
-import { ContentChild, Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FlexmonsterPivot } from 'ng-flexmonster';
 import * as Flexmonster from 'flexmonster';
 
@@ -8,7 +8,7 @@ import * as Flexmonster from 'flexmonster';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ContentChild('pivot', {static: false}) pivot !: FlexmonsterPivot;
+  @ViewChild('pivot', {static: false}) pivot: FlexmonsterPivot;
   public pivotReport = {
     dataSource: {
       filename: 'https://cdn.flexmonster.com/data/data.csv'
