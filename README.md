@@ -1,8 +1,8 @@
-# Flexmonster Pivot table component integration with Angular 4+ framework
-[![Flexmonster Pivot table component](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](http://flexmonster.com)
+# Flexmonster Pivot Table & Charts integration with Angular 4+ framework
+[![Flexmonster Pivot Table & Charts](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](http://flexmonster.com)
 Website: www.flexmonster.com
 
-This repository holds the TypeScript source code for simple Angular and Flexmonster Pivot table component project. It is created using [Angular CLI](https://cli.angular.io/).
+This repository holds the TypeScript source code for simple Angular and Flexmonster Pivot Table & Charts project. It is created using [Angular CLI](https://cli.angular.io/).
 
 ## Prerequisites
 
