@@ -21,11 +21,9 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/flexmonster/flexmonster.min.css"
+              "src/styles.css"
             ],
             "scripts": [
-              "node_modules/flexmonster/flexmonster.full.js"
             ]
           },
           "configurations": {
