@@ -7,8 +7,8 @@ import { FlexmonsterPivot } from 'ng-flexmonster';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-  @ViewChild('pivot1', {static: false}) pivot1: FlexmonsterPivot;
-  @ViewChild('pivot2', {static: false}) pivot2: FlexmonsterPivot;
+  @ViewChild('pivot1') pivot1: FlexmonsterPivot;
+  @ViewChild('pivot2') pivot2: FlexmonsterPivot;
 
   constructor() { }
 

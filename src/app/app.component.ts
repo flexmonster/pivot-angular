@@ -8,7 +8,7 @@ import * as Flexmonster from 'flexmonster';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('pivot', {static: false}) pivot: FlexmonsterPivot;
+  @ViewChild('pivot') pivot: FlexmonsterPivot;
   public pivotReport = {
     dataSource: {
       filename: 'https://cdn.flexmonster.com/data/data.csv'
