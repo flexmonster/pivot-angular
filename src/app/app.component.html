@@ -6,5 +6,6 @@
   [report]="pivotReport"
   [customizeCell]="onCustomizeCell"
   (ready)="onPivotReady($event)"
-  (reportcomplete)="onReportComplete()">
+  (reportcomplete)="onReportComplete()"
+  (beforetoolbarcreated)="customizeToolbar($event)">
 </fm-pivot>
