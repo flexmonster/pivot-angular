@@ -7,8 +7,8 @@ import { FlexmonsterPivot } from 'ng-flexmonster';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-  @ViewChild("pivot1") pivot1: FlexmonsterPivot;
-  @ViewChild("pivot2") pivot2: FlexmonsterPivot;
+  @ViewChild('pivot1') pivot1: FlexmonsterPivot;
+  @ViewChild('pivot2') pivot2: FlexmonsterPivot;
 
   constructor() { }
 
@@ -16,10 +16,10 @@ export class TabsComponent implements OnInit {
   }
 
   onTabChange(index) {
-    console.log("tab change", index);
+    console.log('tab change', index);
     index++;
-    if (this["pivot" + index]) {
-      this["pivot" + index].flexmonster.refresh();
+    if (this['pivot' + index]) {
+      this['pivot' + index].flexmonster.refresh();
     }
   }
 
