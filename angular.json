@@ -25,6 +25,7 @@
               "src/styles.css"
             ],
             "scripts": [
+              "node_modules/flexmonster/lib/flexmonster.highcharts.js"
             ]
           },
           "configurations": {

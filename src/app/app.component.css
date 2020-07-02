@@ -1,9 +1,28 @@
-#fm-pivot-view #fm-grid-view .fm-total-classic-r {
-  background-color: #B2DBBF !important;
+.button-container{
+  width: 100%;
+  text-align: center;
 }
-#fm-pivot-view #fm-grid-view .fm-grand-total-r {
-  background-color: #70C1B3 !important;
+.route-button {
+  border: 2px solid #df3800;
+  background: #fff;
+  color: #df3800;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: normal;
+  padding: 10px 10px;
+  font-size: 14px;
+  line-height: 14px;
 }
-#fm-pivot-view #fm-grid-view .fm-grand-total-c {
-  background-color: #247BA0 !important;
+.route-button:hover, .route-button:focus {
+  border: 2px solid #df3800;
+  background: #df3800;
+  color: #fff;
+}
+.route-button:focus {
+  outline: none;
 }

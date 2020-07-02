@@ -1,11 +1,5 @@
-<h1>Angular/Flexmonster</h1>
-<fm-pivot #pivot 
-  [toolbar]="true" 
-  [width]="'100%'" 
-  [height]="500" 
-  [report]="pivotReport"
-  [customizeCell]="onCustomizeCell"
-  (ready)="onPivotReady($event)"
-  (reportcomplete)="onReportComplete()"
-  (beforetoolbarcreated)="customizeToolbar($event)">
-</fm-pivot>
+<div class=button-container>
+  <a class="route-button" routerLink="home">Home</a>
+  <a class="route-button" routerLink="highcharts">highcharts</a>
+</div>
+<router-outlet></router-outlet>
