@@ -1,23 +1,49 @@
 # Flexmonster Pivot Table & Charts integration with Angular 4+ framework
-[![Flexmonster Pivot Table & Charts](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](http://flexmonster.com)
+[![Flexmonster Pivot Table & Charts](https://www.flexmonster.com/fm_uploads/2020/06/GitHub_fm.png)](http://flexmonster.com)
 Website: www.flexmonster.com
 
-This repository holds the TypeScript source code for simple Angular and Flexmonster Pivot Table & Charts project. It is created using [Angular CLI](https://cli.angular.io/).
+## Flexmonster Pivot Table & Charts
+
+Flexmonster Pivot is a powerful Javascript tool for interactive web reporting. It allows you to visualize and analyze data from JSON, CSV, SQL, NoSQL, Elasticsearch, and OLAP data sources fast and conveniently. Flexmonster is designed to integrate seamlessly with any client-side framework and can be easily embedded into your application.
+
+This repository holds the TypeScript source code for simple [Angular](https://angular.io/) and Flexmonster Pivot Table & Charts project:
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
 
 ## Prerequisites
 
-Node.js and npm are essential to Angular development. 
-    
-<a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
-Get it now</a> if it's not already installed on your machine.
+Node.js and npm are essential to Angular development. [Get it here](https://docs.npmjs.com/getting-started/installing-node) if it's not already installed on your machine.
  
 **Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
-by running `node -v` and `npm -v` in a terminal/console window.
-Older versions produce errors.
+by running `node -v` and `npm -v` in a terminal/console window. Older versions produce errors. We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of Node.js and npm.
 
-We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
+Then install the [Angular CLI](https://cli.angular.io/) globally by running:
 
-## Installation & Usage
+```bash
+npm install -g @angular/cli
+```
 
-Please refer to [Flexmonster Integration with Angular](https://www.flexmonster.com/doc/integration-with-angular-4/) tutorial.
+## Installation
 
+1. Download the `.zip` archive with the sample project or clone it from GitHub with the following command:
+
+```bash
+git clone https://github.com/flexmonster/pivot-angular.git && cd pivot-angular
+```
+
+2. Install the npm packages described in `package.json`:
+
+```bash
+npm install
+```
+
+3. Run the project from the console:
+
+```bash
+ng serve
+```
+
+## Usage
+For details on usage, refer to the [Flexmonster integration with Angular](https://www.flexmonster.com/doc/integration-with-angular-4/) tutorial.
