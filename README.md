@@ -39,7 +39,7 @@ git clone https://github.com/flexmonster/pivot-angular.git && cd pivot-angular
 npm install
 ```
 
-3. Run the project from the console:
+3. Run the project with the Angular pivot table from the console:
 
 ```bash
 ng serve
