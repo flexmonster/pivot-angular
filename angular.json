@@ -24,9 +24,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/flexmonster/lib/flexmonster.highcharts.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

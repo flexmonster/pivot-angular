@@ -1,0 +1,6 @@
+<h3 class="page-title">
+    How to <a target="_blank" href="https://www.flexmonster.com/doc/customizing-toolbar/">customize the Toolbar</a>
+    example
+</h3>
+
+<fm-pivot #pivot [toolbar]="true" [report]="'https://cdn.flexmonster.com/reports/report.json'" (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>

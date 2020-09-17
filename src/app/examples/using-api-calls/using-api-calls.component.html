@@ -1,0 +1,10 @@
+<h3 class="page-title">
+    How to access <a target="blank" href="https://www.flexmonster.com/api/methods/">Flexmonster API calls</a> example
+</h3>
+
+<button class="button-red" (click)="showChart()">Show Pie Chart</button>
+<button class="button-red" (click)="showGrid()">Show Grid</button>
+<button class="button-red" (click)="readOnly()">Make read only</button>
+<button class="button-red" (click)="interactive()">Make interactive</button>
+
+<fm-pivot #pivot [report]="'https://cdn.flexmonster.com/reports/report.json'"></fm-pivot>

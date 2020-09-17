@@ -1,5 +1,11 @@
-<div class=button-container>
-  <a class="route-button" routerLink="home">Home</a>
-  <a class="route-button" routerLink="highcharts">highcharts</a>
-</div>
-<router-outlet></router-outlet>
+<section id="app">
+  <app-top-menu></app-top-menu>
+  <div class="wrap">
+    <div class="side-menu-wrap">
+      <app-side-menu></app-side-menu>
+      <div class="pivot-example-container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</section>
