@@ -9,6 +9,7 @@
 .side-menu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .sub-title {
@@ -40,6 +41,16 @@
 .side-menu li a.active,
 .side-menu li.active a {
     color: #df3800;
+}
+
+.side-menu li a.active:before, 
+.side-menu li.active a:before {
+    content: ' ';
+    position: absolute;
+    right: -1px;
+    height: calc(100% - 16px);
+    width: 3px;
+    background: #df3800;
 }
 
 .title-link {

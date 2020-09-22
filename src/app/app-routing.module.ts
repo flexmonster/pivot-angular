@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PivoTableDemoComponent } from './examples/pivo-table-demo/pivo-table-demo.component';
+import { PivotTableDemoComponent } from './examples/pivot-table-demo/pivot-table-demo.component';
 import { CallingEventsComponent } from './examples/calling-events/calling-events.component';
 import { UsingApiCallsComponent } from './examples/using-api-calls/using-api-calls.component';
 import { UpdatingDataComponent } from './examples/updating-data/updating-data.component';
@@ -9,7 +9,7 @@ import { CustomizingGridComponent } from './examples/customizing-grid/customizin
 import { WithHighchartsComponent } from './examples/with-highcharts/with-highcharts.component';
 
 const appRoutes: Routes = [
-    { path: 'pivot-table-demo', component: PivoTableDemoComponent },
+    { path: 'pivot-table-demo', component: PivotTableDemoComponent },
     { path: 'calling-events', component: CallingEventsComponent },
     { path: 'using-api-calls', component: UsingApiCallsComponent },
     { path: 'updating-data', component: UpdatingDataComponent },

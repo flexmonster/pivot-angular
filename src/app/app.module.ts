@@ -7,7 +7,7 @@ import { FlexmonsterPivotModule } from 'ng-flexmonster';
 import { AppRoutingModule } from './app-routing.module';
 import { TopMenuComponent } from './common/top-menu/top-menu.component';
 import { SideMenuComponent } from './common/side-menu/side-menu.component';
-import { PivoTableDemoComponent } from './examples/pivo-table-demo/pivo-table-demo.component';
+import { PivotTableDemoComponent } from './examples/pivot-table-demo/pivot-table-demo.component';
 import { CallingEventsComponent } from './examples/calling-events/calling-events.component';
 import { UsingApiCallsComponent } from './examples/using-api-calls/using-api-calls.component';
 import { UpdatingDataComponent } from './examples/updating-data/updating-data.component';
@@ -20,7 +20,7 @@ import { WithHighchartsComponent } from './examples/with-highcharts/with-highcha
     AppComponent,
     TopMenuComponent,
     SideMenuComponent,
-    PivoTableDemoComponent,
+    PivotTableDemoComponent,
     CallingEventsComponent,
     UsingApiCallsComponent,
     UpdatingDataComponent,
