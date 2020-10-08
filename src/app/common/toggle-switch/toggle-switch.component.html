@@ -1,0 +1,6 @@
+<div class="toggle-switch noselect">
+  <input [id]="_id" class="button-checkbox" type="checkbox" [(ngModel)]="checked" (change)="onChange()" checked/>
+  <label [for]="_id" class="button-checkbox-label">
+    <span class="on">{{ checked ? labenOn : labenOff }}</span>
+  </label>
+</div>

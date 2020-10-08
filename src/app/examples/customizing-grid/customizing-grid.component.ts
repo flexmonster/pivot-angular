@@ -63,4 +63,11 @@ export class CustomizingGridComponent implements OnInit {
         this.pivot.flexmonster.customizeCell(this.customizeCellFunction);
     }
 
+    toggleCustomization(checked: boolean) {
+        if (checked) {
+            this.applyCustomization();
+        } else {
+            this.removeCustomization();
+        }
+    }
 }

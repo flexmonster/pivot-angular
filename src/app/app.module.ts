@@ -14,6 +14,9 @@ import { UpdatingDataComponent } from './examples/updating-data/updating-data.co
 import { CustomizingToolbarComponent } from './examples/customizing-toolbar/customizing-toolbar.component';
 import { CustomizingGridComponent } from './examples/customizing-grid/customizing-grid.component';
 import { WithHighchartsComponent } from './examples/with-highcharts/with-highcharts.component';
+import { ToggleButtonComponent } from './common/toggle-button/toggle-button.component';
+import { FormsModule } from '@angular/forms';
+import { ToggleSwitchComponent } from './common/toggle-switch/toggle-switch.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,12 @@ import { WithHighchartsComponent } from './examples/with-highcharts/with-highcha
     UpdatingDataComponent,
     CustomizingToolbarComponent,
     CustomizingGridComponent,
-    WithHighchartsComponent
+    WithHighchartsComponent,
+    ToggleButtonComponent,
+    ToggleSwitchComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, MatTabsModule, FlexmonsterPivotModule, AppRoutingModule
+    BrowserModule, BrowserAnimationsModule, MatTabsModule, FlexmonsterPivotModule, AppRoutingModule, FormsModule
   ],
   exports: [MatTabsModule],
   providers: [],

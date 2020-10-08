@@ -1,8 +1,11 @@
 <h3 class="page-title">
-    How to <a target="_blank" href="https://www.flexmonster.com/api/customizecell/">customize the grid cells</a> example
+    How to <a target="_blank" class="title-link" href="https://www.flexmonster.com/api/customizecell/">customize the
+        grid cells</a> example
 </h3>
 
-<button class="button-red" (click)="removeCustomization()">Remove Customization</button>
-<button class="button-red" (click)="applyCustomization()">Apply Customization</button>
+<div class="description-blocks">
+    <app-toggle-button (clicked)="toggleCustomization($event)" [labenOn]="'The grid cells are customized'"
+        [labenOff]="'The grid cells are not customized'" [_id]="'customizationToggle'"></app-toggle-button>
+</div>
 
 <fm-pivot #pivot [report]="report" [toolbar]="true" [customizeCell]="customizeCellFunction"></fm-pivot>

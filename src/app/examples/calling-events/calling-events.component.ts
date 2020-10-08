@@ -73,6 +73,14 @@ export class CallingEventsComponent implements OnInit {
         });
     }
 
+    toggleEvents(checked: boolean) {
+        if (checked) {
+            this.signOnAllEvents();
+        } else {
+            this.signOffAllEvents();
+        }
+    }
+
     signOffAllEvents() {
         for (const eventName of this.eventList) {
             // remove all handlers for specified event

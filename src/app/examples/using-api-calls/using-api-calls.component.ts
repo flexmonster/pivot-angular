@@ -10,15 +10,37 @@ export class UsingApiCallsComponent implements OnInit {
 
     @ViewChild('pivot') pivot: FlexmonsterPivot;
 
+    public report: Flexmonster.Report = {
+        dataSource: {
+            filename: 'https://cdn.flexmonster.com/data/data.json',
+        }
+    };
+
     constructor() { }
 
     ngOnInit(): void {
     }
 
-    showChart() {
-        this.pivot.flexmonster.showCharts("pie");
+    toggleView(checked: boolean) {
+        if (checked) {
+            this.showGrid();
+        } else {
+            this.showChart();
+        }
     }
-    
+
+    toggleMode(checked: boolean) {
+        if (checked) {
+            this.interactive();
+        } else {
+            this.readOnly();
+        }
+    }
+
+    showChart() {
+        this.pivot.flexmonster.showCharts("column");
+    }
+
     showGrid() {
         this.pivot.flexmonster.showGrid();
     }
@@ -31,15 +53,16 @@ export class UsingApiCallsComponent implements OnInit {
             },
             chart: {
                 showFilter: false,
+                showMeasures: false,
             },
             configuratorButton: false,
-            sorting: "off",
+            sorting: false,
             drillThrough: false,
         });
-        this.showContextMenu();
+        this.hideContextMenu();
         this.pivot.flexmonster.refresh();
     }
-
+    
     interactive() {
         this.pivot.flexmonster.setOptions({
             grid: {
@@ -48,14 +71,49 @@ export class UsingApiCallsComponent implements OnInit {
             },
             chart: {
                 showFilter: true,
+                showMeasures: true,
             },
             configuratorButton: true,
-            sorting: "on",
+            sorting: true,
             drillThrough: true,
         });
-        this.hideContextMenu();
+        this.showContextMenu();
         this.pivot.flexmonster.refresh();
     }
+
+    // readOnly() {
+    //     this.pivot.flexmonster.setOptions({
+    //         grid: {
+    //             showFilter: false,
+    //             dragging: false,
+    //         },
+    //         chart: {
+    //             showFilter: false,
+    //         },
+    //         configuratorButton: false,
+    //         sorting: "off",
+    //         drillThrough: false,
+    //     });
+    //     this.showContextMenu();
+    //     this.pivot.flexmonster.refresh();
+    // }
+
+    // interactive() {
+    //     this.pivot.flexmonster.setOptions({
+    //         grid: {
+    //             showFilter: true,
+    //             dragging: true,
+    //         },
+    //         chart: {
+    //             showFilter: true,
+    //         },
+    //         configuratorButton: true,
+    //         sorting: "on",
+    //         drillThrough: true,
+    //     });
+    //     this.hideContextMenu();
+    //     this.pivot.flexmonster.refresh();
+    // }
 
     showContextMenu() {
         this.pivot.flexmonster.customizeContextMenu(() => {
