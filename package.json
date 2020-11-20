@@ -11,17 +11,17 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
-    "@angular/animations": "^10.0.4",
-    "@angular/cdk": "^10.0.2",
-    "@angular/common": "^10.0.4",
-    "@angular/compiler": "^10.0.4",
-    "@angular/core": "^10.0.4",
-    "@angular/forms": "^10.0.4",
-    "@angular/material": "^10.0.2",
-    "@angular/platform-browser": "^10.0.4",
-    "@angular/platform-browser-dynamic": "^10.0.4",
-    "@angular/platform-server": "^10.0.4",
-    "@angular/router": "^10.0.4",
+    "@angular/animations": "^11.0.1",
+    "@angular/cdk": "^11.0.0",
+    "@angular/common": "^11.0.1",
+    "@angular/compiler": "^11.0.1",
+    "@angular/core": "^11.0.1",
+    "@angular/forms": "^11.0.1",
+    "@angular/material": "^11.0.0",
+    "@angular/platform-browser": "^11.0.1",
+    "@angular/platform-browser-dynamic": "^11.0.1",
+    "@angular/platform-server": "^11.0.1",
+    "@angular/router": "^11.0.1",
     "core-js": "^2.6.5",
     "highcharts": "^8.1.2",
     "ng-flexmonster": "latest",
@@ -31,10 +31,10 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1000.3",
-    "@angular/cli": "^10.0.3",
-    "@angular/compiler-cli": "^10.0.4",
-    "@angular/language-service": "^10.0.4",
+    "@angular-devkit/build-angular": "~0.1100.2",
+    "@angular/cli": "^11.0.2",
+    "@angular/compiler-cli": "^11.0.1",
+    "@angular/language-service": "^11.0.1",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "fibers": "^4.0.3",
@@ -43,6 +43,6 @@
     "protractor": "~7.0.0",
     "ts-node": "~4.1.0",
     "tslint": "~6.1.0",
-    "typescript": "^3.6.4"
+    "typescript": "^4.0.5"
   }
 }
