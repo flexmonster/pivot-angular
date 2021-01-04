@@ -47,81 +47,16 @@ export class UsingApiCallsComponent implements OnInit {
 
     readOnly() {
         this.pivot.flexmonster.setOptions({
-            grid: {
-                showFilter: false,
-                dragging: false,
-            },
-            chart: {
-                showFilter: false,
-                showMeasures: false,
-            },
-            configuratorButton: false,
-            sorting: false,
-            drillThrough: false,
+            readOnly: true
         });
-        this.hideContextMenu();
         this.pivot.flexmonster.refresh();
     }
     
     interactive() {
         this.pivot.flexmonster.setOptions({
-            grid: {
-                showFilter: true,
-                dragging: true,
-            },
-            chart: {
-                showFilter: true,
-                showMeasures: true,
-            },
-            configuratorButton: true,
-            sorting: true,
-            drillThrough: true,
+            readOnly: false
         });
-        this.showContextMenu();
         this.pivot.flexmonster.refresh();
     }
 
-    // readOnly() {
-    //     this.pivot.flexmonster.setOptions({
-    //         grid: {
-    //             showFilter: false,
-    //             dragging: false,
-    //         },
-    //         chart: {
-    //             showFilter: false,
-    //         },
-    //         configuratorButton: false,
-    //         sorting: "off",
-    //         drillThrough: false,
-    //     });
-    //     this.showContextMenu();
-    //     this.pivot.flexmonster.refresh();
-    // }
-
-    // interactive() {
-    //     this.pivot.flexmonster.setOptions({
-    //         grid: {
-    //             showFilter: true,
-    //             dragging: true,
-    //         },
-    //         chart: {
-    //             showFilter: true,
-    //         },
-    //         configuratorButton: true,
-    //         sorting: "on",
-    //         drillThrough: true,
-    //     });
-    //     this.hideContextMenu();
-    //     this.pivot.flexmonster.refresh();
-    // }
-
-    showContextMenu() {
-        this.pivot.flexmonster.customizeContextMenu(() => {
-            return [];
-        });
-    }
-
-    hideContextMenu() {
-        this.pivot.flexmonster.customizeContextMenu(null);
-    }
 }
