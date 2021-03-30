@@ -7,6 +7,7 @@ import { UpdatingDataComponent } from './examples/updating-data/updating-data.co
 import { CustomizingToolbarComponent } from './examples/customizing-toolbar/customizing-toolbar.component';
 import { CustomizingGridComponent } from './examples/customizing-grid/customizing-grid.component';
 import { WithHighchartsComponent } from './examples/with-highcharts/with-highcharts.component';
+import { WithAmchartsComponent } from './examples/with-amcharts/with-amcharts.component';
 
 const appRoutes: Routes = [
     { path: 'pivot-table-demo', component: PivotTableDemoComponent },
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
     { path: 'customizing-toolbar', component: CustomizingToolbarComponent },
     { path: 'customizing-grid', component: CustomizingGridComponent },
     { path: 'with-highcharts', component: WithHighchartsComponent },
+    { path: 'with-amcharts', component: WithAmchartsComponent },
     { path: '**', redirectTo: 'pivot-table-demo' }
 ];
 

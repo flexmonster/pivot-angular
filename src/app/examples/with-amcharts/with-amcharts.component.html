@@ -1,0 +1,12 @@
+<h3 class="page-title">
+    Integrating <a target="_blank" class="title-link" href="https://www.flexmonster.com/doc/integration-with-highcharts/">with Highcharts</a>
+</h3>
+
+<fm-pivot #pivot [toolbar]="true" [report]="'https://cdn.flexmonster.com/reports/report.json'"
+    [licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'"
+    (reportcomplete)="onReportComplete()">
+</fm-pivot>
+
+<div class="chart-container">
+    <div id="amcharts-container"></div>
+</div>
