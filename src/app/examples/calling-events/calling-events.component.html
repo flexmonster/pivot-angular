@@ -12,12 +12,15 @@
 </div>
 
 <div class="description-blocks">
-    <app-toggle-button [_id]="'eventsToggle'" [labenOn]="'Events are tracked'" [labenOff]="'Events are not tracked'" (clicked)="toggleEvents($event)"></app-toggle-button>
+    <app-toggle-button [_id]="'eventsToggle'" [labenOn]="'Events are tracked'" [labenOff]="'Events are not tracked'"
+        (clicked)="toggleEvents($event)"></app-toggle-button>
 </div>
 
-<fm-pivot #pivot [report]="'https://cdn.flexmonster.com/reports/report.json'" [toolbar]="true"
-    (ready)="signOnAllEvents()">
-</fm-pivot>
+<div>
+    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/reports/report.json'" [toolbar]="true"
+        (ready)="signOnAllEvents()">
+    </fm-pivot>
+</div>
 
 <div class="section">
     <h3 class="title-4">Log Output</h3>

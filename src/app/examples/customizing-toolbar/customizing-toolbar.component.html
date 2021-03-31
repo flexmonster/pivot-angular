@@ -2,4 +2,6 @@
     Customizing <a target="_blank" class="title-link" href="https://www.flexmonster.com/doc/customizing-toolbar/">the Toolbar</a>
 </h3>
 
-<fm-pivot #pivot [toolbar]="true" [report]="'https://cdn.flexmonster.com/reports/report.json'" (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
+<div>
+    <fm-pivot #pivot [toolbar]="true" [report]="'https://cdn.flexmonster.com/reports/report.json'" (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
+</div>
