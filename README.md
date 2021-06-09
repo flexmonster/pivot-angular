@@ -1,6 +1,6 @@
 # Flexmonster Pivot Table & Charts integration with Angular 5+ framework
-[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/landing.png)](http://flexmonster.com)
-Website: www.flexmonster.com
+[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/landing.png)](http://flexmonster.com/?r=rm_ng)
+Website: [www.flexmonster.com](https://www.flexmonster.com/?r=rm_ng)
 
 ## Flexmonster Pivot Table & Charts
 
@@ -46,4 +46,4 @@ ng serve
 ```
 
 ## Usage
-For details on usage, refer to the [Flexmonster integration with Angular](https://www.flexmonster.com/doc/integration-with-angular-4/) tutorial.
+For details on usage, refer to the [Flexmonster integration with Angular](https://www.flexmonster.com/doc/integration-with-angular-4/?r=rm_ng) tutorial.
