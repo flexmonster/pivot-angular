@@ -19,7 +19,7 @@ export class CustomizingToolbarComponent implements OnInit {
         this.pivot.flexmonster.alert({
             title: "Customizing Flexmonster",
             message:
-                "How to customize the Toolbar: <a style='text-decoration:underline; color:#00A45A' target='blank' href='https://www.flexmonster.com/doc/customizing-toolbar/'>https://www.flexmonster.com/doc/customizing-toolbar/</a> <br>",
+                "How to customize the Toolbar: <a style='text-decoration:underline; color:#00A45A' target='blank' href='https://www.flexmonster.com/doc/customizing-toolbar/?r=rm_ng'>https://www.flexmonster.com/doc/customizing-toolbar/</a> <br>",
             type: "info",
             blocking: false,
         });
