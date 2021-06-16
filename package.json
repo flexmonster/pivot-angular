@@ -24,7 +24,7 @@
     "@angular/platform-server": "^12.0.4",
     "@angular/router": "^12.0.4",
     "core-js": "^2.6.5",
-    "highcharts": "^8.1.2",
+    "highcharts": "^9.0.0",
     "ng-flexmonster": "latest",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.4.0",
