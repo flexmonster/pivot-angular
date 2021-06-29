@@ -63,6 +63,10 @@ export class CallingEventsComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    customizeToolbar(toolbar: Flexmonster.Toolbar) {
+        toolbar.showShareReportTab = true;
+    }
+
     printLog(log: string) {
         this.logs.push({
             date: new Date(),

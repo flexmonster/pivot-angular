@@ -4,12 +4,16 @@
 </h3>
 
 <div class="description-blocks">
-    <app-toggle-switch [_id]="'viewToggle'" (clicked)="toggleView($event)" [labenOn]="'Show grid'" [labenOff]="'Show Column chart'">
+    <app-toggle-switch [_id]="'viewToggle'" (clicked)="toggleView($event)" [labenOn]="'Grid'"
+        [labenOff]="'Column chart'">
     </app-toggle-switch>
-    <app-toggle-switch [_id]="'modeToggle'" (clicked)="toggleMode($event)" [labenOn]="'Make interactive'" [labenOff]="'Make read-only'">
+    <app-toggle-switch [_id]="'modeToggle'" (clicked)="toggleMode($event)" [labenOn]="'Interactive'"
+        [labenOff]="'Read-only'">
     </app-toggle-switch>
 </div>
 
 <div>
-    <fm-pivot #pivot [report]="report"></fm-pivot>
+    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [toolbar]="true"
+        [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}" [height]="600"
+        (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
 </div>

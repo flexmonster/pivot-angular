@@ -1,5 +1,6 @@
 <h3 class="page-title">
-    Customizing <a target="_blank" class="title-link" href="https://www.flexmonster.com/api/customizecell/?r=rm_ng">the grid cells</a>
+    Customizing <a target="_blank" class="title-link" href="https://www.flexmonster.com/api/customizecell/?r=rm_ng">the
+        grid cells</a>
 </h3>
 
 <div class="description-blocks">
@@ -8,5 +9,7 @@
 </div>
 
 <div>
-    <fm-pivot #pivot [report]="report" [toolbar]="true" [customizeCell]="customizeCellFunction"></fm-pivot>
+    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [toolbar]="true"
+        [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}" [height]="600"
+        [customizeCell]="customizeCellFunction" (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
 </div>

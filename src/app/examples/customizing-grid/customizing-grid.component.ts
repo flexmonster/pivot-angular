@@ -10,35 +10,13 @@ export class CustomizingGridComponent implements OnInit {
 
     @ViewChild('pivot') pivot: FlexmonsterPivot;
 
-    public report: Flexmonster.Report = {
-        dataSource: {
-            filename: 'https://cdn.flexmonster.com/data/data.csv'
-        },
-        slice: {
-            rows: [{
-                uniqueName: 'Category'
-            }, {
-                uniqueName: '[Measures]'
-            }],
-            columns: [{
-                uniqueName: 'Color'
-            }],
-            measures: [{
-                uniqueName: 'Price',
-                aggregation: 'sum'
-            }, {
-                uniqueName: 'Discount',
-                aggregation: 'sum'
-            }, {
-                uniqueName: 'Quantity',
-                aggregation: 'sum'
-            }]
-        }
-    };
-
     constructor() { }
 
     ngOnInit(): void {
+    }
+
+    customizeToolbar(toolbar: Flexmonster.Toolbar) {
+        toolbar.showShareReportTab = true;
     }
 
     customizeCellFunction(cell: Flexmonster.CellBuilder, data: Flexmonster.CellData) {

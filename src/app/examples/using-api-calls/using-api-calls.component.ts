@@ -10,15 +10,13 @@ export class UsingApiCallsComponent implements OnInit {
 
     @ViewChild('pivot') pivot: FlexmonsterPivot;
 
-    public report: Flexmonster.Report = {
-        dataSource: {
-            filename: 'https://cdn.flexmonster.com/data/data.json',
-        }
-    };
-
     constructor() { }
 
     ngOnInit(): void {
+    }
+
+    customizeToolbar(toolbar: Flexmonster.Toolbar) {
+        toolbar.showShareReportTab = true;
     }
 
     toggleView(checked: boolean) {

@@ -1,4 +1,6 @@
 <h3 class="page-title">Pivot Table Demo</h3>
 <div>
-    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/reports/report.json'" [toolbar]="true"></fm-pivot>
+    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [toolbar]="true"
+        [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}" [height]="600"
+        (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
 </div>

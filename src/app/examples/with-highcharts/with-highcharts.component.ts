@@ -18,6 +18,10 @@ export class WithHighchartsComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    customizeToolbar(toolbar: Flexmonster.Toolbar) {
+        toolbar.showShareReportTab = true;
+    }
+
     drawChart() {
         this.pivot.flexmonster.highcharts.getData(
             {

@@ -6,7 +6,8 @@
 <div class="description-blocks first-description-block">
     <p>
         Perform an action (for example, click on a grid cell) to trigger a
-        <a target="blank" class="title-link" href="https://www.flexmonster.com/api/events/?r=rm_ng">Flexmonster event</a>.
+        <a target="blank" class="title-link" href="https://www.flexmonster.com/api/events/?r=rm_ng">Flexmonster
+            event</a>.
         Scroll down to the log output to see which events get triggered.
     </p>
 </div>
@@ -17,8 +18,9 @@
 </div>
 
 <div>
-    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/reports/report.json'" [toolbar]="true"
-        (ready)="signOnAllEvents()">
+    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [toolbar]="true"
+        [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}" [height]="600" (ready)="signOnAllEvents()"
+        (beforetoolbarcreated)="customizeToolbar($event)">
     </fm-pivot>
 </div>
 

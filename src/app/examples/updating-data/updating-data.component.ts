@@ -40,6 +40,10 @@ export class UpdatingDataComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    customizeToolbar(toolbar: Flexmonster.Toolbar) {
+        toolbar.showShareReportTab = true;
+    }
+
     onReady() {
         // Connect Flexmonster to the data
         this.pivot.flexmonster.connectTo({ data: this.data });

@@ -12,4 +12,8 @@ export class PivotTableDemoComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    customizeToolbar(toolbar: Flexmonster.Toolbar) {
+        toolbar.showShareReportTab = true;
+    }
+
 }

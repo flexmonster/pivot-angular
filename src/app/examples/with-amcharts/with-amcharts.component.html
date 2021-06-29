@@ -1,11 +1,13 @@
 <h3 class="page-title">
-    Integrating <a target="_blank" class="title-link" href="https://www.flexmonster.com/doc/integration-with-amcharts/?r=rm_ng">with amCharts</a>
+    Integrating <a target="_blank" class="title-link"
+        href="https://www.flexmonster.com/doc/integration-with-amcharts/?r=rm_ng">with amCharts</a>
 </h3>
 
 <div>
-    <fm-pivot #pivot [toolbar]="true" [report]="'https://cdn.flexmonster.com/reports/report.json'"
-        [licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'"
-        (reportcomplete)="onReportComplete()">
+    <fm-pivot #pivot [toolbar]="true" [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+        [height]="600" [report]="'https://cdn.flexmonster.com/github/demo-report.json'"
+        [licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'" (reportcomplete)="onReportComplete()"
+        (beforetoolbarcreated)="customizeToolbar($event)">
     </fm-pivot>
 </div>
 

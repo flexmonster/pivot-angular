@@ -1,7 +1,9 @@
 <h3 class="page-title">
-    Customizing <a target="_blank" class="title-link" href="https://www.flexmonster.com/doc/customizing-toolbar/?r=rm_ng">the Toolbar</a>
+    Customizing <a target="_blank" class="title-link"
+        href="https://www.flexmonster.com/doc/customizing-toolbar/?r=rm_ng">the Toolbar</a>
 </h3>
 
 <div>
-    <fm-pivot #pivot [toolbar]="true" [report]="'https://cdn.flexmonster.com/reports/report.json'" (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
+    <fm-pivot #pivot [toolbar]="true" [height]="600" [report]="'https://cdn.flexmonster.com/github/demo-report.json'"
+        (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
 </div>
