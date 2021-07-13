@@ -9,7 +9,7 @@
 </div>
 
 <div>
-    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [toolbar]="true"
-        [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}" [height]="600"
-        [customizeCell]="customizeCellFunction" (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
+    <fm-pivot #pivot [toolbar]="true" [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+        [height]="600" (ready)="onReady()" [customizeCell]="customizeCellFunction"
+        (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
 </div>
