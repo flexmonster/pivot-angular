@@ -8,7 +8,7 @@ import { FlexmonsterPivot } from 'ng-flexmonster';
 })
 export class CustomizingToolbarComponent implements OnInit {
 
-    @ViewChild('pivot') pivot: FlexmonsterPivot;
+    @ViewChild('pivot') pivot!: FlexmonsterPivot;
 
     constructor() { }
 

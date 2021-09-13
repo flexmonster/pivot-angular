@@ -6,9 +6,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./toggle-button.component.css']
 })
 export class ToggleButtonComponent implements OnInit {
-  @Input() public _id: string;
-  @Input() public labenOn: string;
-  @Input() public labenOff: string;
+  @Input() public _id!: string;
+  @Input() public labenOn!: string;
+  @Input() public labenOff!: string;
 
   @Output() public clicked: EventEmitter<boolean> = new EventEmitter<boolean>();
 

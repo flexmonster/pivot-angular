@@ -8,8 +8,9 @@ import { FlexmonsterPivot } from 'ng-flexmonster';
 })
 export class CallingEventsComponent implements OnInit {
 
-    @ViewChild('pivot') pivot: FlexmonsterPivot;
-    @ViewChild('logsContainer') logsContainer: ElementRef<HTMLElement>;
+    @ViewChild('pivot') pivot!: FlexmonsterPivot;
+    @ViewChild('logsContainer')
+    logsContainer!: ElementRef<HTMLElement>;
 
     public logs: {
         date: Date,

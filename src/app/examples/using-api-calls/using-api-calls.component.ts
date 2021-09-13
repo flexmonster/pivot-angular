@@ -8,7 +8,8 @@ import { FlexmonsterPivot } from 'ng-flexmonster';
 })
 export class UsingApiCallsComponent implements OnInit {
 
-    @ViewChild('pivot') pivot: FlexmonsterPivot;
+    @ViewChild('pivot')
+    pivot!: FlexmonsterPivot;
 
     constructor() { }
 

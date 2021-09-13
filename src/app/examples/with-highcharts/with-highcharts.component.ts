@@ -11,7 +11,7 @@ import "flexmonster/lib/flexmonster.highcharts.js";
 })
 export class WithHighchartsComponent implements OnInit {
 
-    @ViewChild('pivot') pivot: FlexmonsterPivot;
+    @ViewChild('pivot') pivot!: FlexmonsterPivot;
 
     constructor() { }
 
@@ -23,7 +23,7 @@ export class WithHighchartsComponent implements OnInit {
     }
 
     drawChart() {
-        this.pivot.flexmonster.highcharts.getData(
+        this.pivot.flexmonster.highcharts!.getData(
             {
                 type: "area",
             },

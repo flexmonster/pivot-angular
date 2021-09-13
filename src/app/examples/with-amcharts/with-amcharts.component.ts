@@ -15,9 +15,9 @@ import am4themes_animated from '@amcharts/amcharts4/themes/animated';
     styleUrls: ['./with-amcharts.component.css']
 })
 export class WithAmchartsComponent implements OnInit {
-    @ViewChild('pivot') pivot: FlexmonsterPivot;
+    @ViewChild('pivot') pivot!: FlexmonsterPivot;
 
-    chart: am4charts.PieChart;
+    chart!: am4charts.PieChart;
 
     public report: Flexmonster.Report = {
         dataSource: {
@@ -47,7 +47,7 @@ export class WithAmchartsComponent implements OnInit {
     }
 
     drawChart() {
-        this.pivot.flexmonster.amcharts.getData(
+        this.pivot.flexmonster.amcharts!.getData(
             {},
             this.createChart.bind(this),
             this.updateChart.bind(this)
@@ -59,7 +59,7 @@ export class WithAmchartsComponent implements OnInit {
         this.drawChart();
     }
 
-    createChart(chartData, rawData) {
+    createChart(chartData:Flexmonster.GetDataValueObject, rawData:any) {
 
         /* Apply amCharts theme */
         am4core.useTheme(am4themes_animated);
@@ -75,8 +75,8 @@ export class WithAmchartsComponent implements OnInit {
 
         /* Create and configure series for a pie chart */
         var pieSeries = chart.series.push(new am4charts.PieSeries());
-        pieSeries.dataFields.category = this.pivot.flexmonster.amcharts.getCategoryName(rawData);
-        pieSeries.dataFields.value = this.pivot.flexmonster.amcharts.getMeasureNameByIndex(rawData, 0);
+        pieSeries.dataFields.category = this.pivot.flexmonster.amcharts!.getCategoryName(rawData);
+        pieSeries.dataFields.value = this.pivot.flexmonster.amcharts!.getMeasureNameByIndex(rawData, 0);
         pieSeries.slices.template.stroke = am4core.color("#fff");
         pieSeries.slices.template.strokeWidth = 2;
         pieSeries.slices.template.strokeOpacity = 1;
@@ -89,7 +89,7 @@ export class WithAmchartsComponent implements OnInit {
         this.chart = chart;
     }
 
-    updateChart(chartData, rawData) {
+    updateChart(chartData:Flexmonster.GetDataValueObject, rawData:any) {
         this.chart.dispose();
         this.createChart(chartData, rawData)
     }

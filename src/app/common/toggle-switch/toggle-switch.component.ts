@@ -6,9 +6,9 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@
   styleUrls: ['./toggle-switch.component.css']
 })
 export class ToggleSwitchComponent implements OnInit {
-  @Input() public _id: string;
-  @Input() public labenOn: string;
-  @Input() public labenOff: string;
+  @Input() public _id!: string;
+  @Input() public labenOn!: string;
+  @Input() public labenOff!: string;
 
   @Output() public clicked: EventEmitter<boolean> = new EventEmitter<boolean>();
 

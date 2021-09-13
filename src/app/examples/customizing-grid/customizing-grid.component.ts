@@ -8,7 +8,7 @@ import { FlexmonsterPivot } from 'ng-flexmonster';
 })
 export class CustomizingGridComponent implements OnInit {
 
-    @ViewChild('pivot') pivot: FlexmonsterPivot;
+    @ViewChild('pivot') pivot!: FlexmonsterPivot;
 
     public report: Object = {
         dataSource: {
@@ -54,17 +54,20 @@ export class CustomizingGridComponent implements OnInit {
             let backgroundColor = "#00A45A";
             let textShadowColor = "#095231";
             let borderColor = "#009552";
-            cell.style["background-color"] = backgroundColor;
-            cell.style["color"] = "white";
-            cell.style["font-weight"] = "bold";
-            cell.style["text-shadow"] = `0px 2px 3px ${textShadowColor}`;
-            cell.style["border-bottom"] = `1px solid ${borderColor}`;
-            cell.style["border-right"] = `1px solid ${borderColor}`;
+            cell.style = { 
+                ...cell.style,
+                "background-color": backgroundColor,
+                "color": "white",
+                "font-weight": "bold",
+                "text-shadow": `0px 2px 3px ${textShadowColor}`,
+                "border-bottom": `1px solid ${borderColor}`,
+                "border-right": `1px solid ${borderColor}`
+            };
         }
     }
 
     removeCustomization() {
-        this.pivot.flexmonster.customizeCell(null);
+        this.pivot.flexmonster.customizeCell(null!);
     }
 
     applyCustomization() {
