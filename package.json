@@ -1,10 +1,11 @@
 {
   "name": "pivot-angular",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --open",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -20,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "highcharts": "^9.2.2",
-    "ng-flexmonster": "^2.9.7",
+    "ng-flexmonster": "latest",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
