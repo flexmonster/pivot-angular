@@ -47,7 +47,7 @@ export class WithAmchartsComponent implements OnInit {
     }
 
     drawChart() {
-        this.pivot.flexmonster.amcharts!.getData(
+        this.pivot.flexmonster.amcharts?.getData(
             {},
             this.createChart.bind(this),
             this.updateChart.bind(this)
@@ -59,7 +59,7 @@ export class WithAmchartsComponent implements OnInit {
         this.drawChart();
     }
 
-    createChart(chartData:Flexmonster.GetDataValueObject, rawData:any) {
+    createChart(chartData: Flexmonster.GetDataValueObject, rawData: Flexmonster.GetDataValueObject) {
 
         /* Apply amCharts theme */
         am4core.useTheme(am4themes_animated);
@@ -75,8 +75,8 @@ export class WithAmchartsComponent implements OnInit {
 
         /* Create and configure series for a pie chart */
         var pieSeries = chart.series.push(new am4charts.PieSeries());
-        pieSeries.dataFields.category = this.pivot.flexmonster.amcharts!.getCategoryName(rawData);
-        pieSeries.dataFields.value = this.pivot.flexmonster.amcharts!.getMeasureNameByIndex(rawData, 0);
+        pieSeries.dataFields.category = this.pivot.flexmonster.amcharts?.getCategoryName(rawData);
+        pieSeries.dataFields.value = this.pivot.flexmonster.amcharts?.getMeasureNameByIndex(rawData, 0);
         pieSeries.slices.template.stroke = am4core.color("#fff");
         pieSeries.slices.template.strokeWidth = 2;
         pieSeries.slices.template.strokeOpacity = 1;
@@ -89,7 +89,7 @@ export class WithAmchartsComponent implements OnInit {
         this.chart = chart;
     }
 
-    updateChart(chartData:Flexmonster.GetDataValueObject, rawData:any) {
+    updateChart(chartData: Flexmonster.GetDataValueObject, rawData: Flexmonster.GetDataValueObject) {
         this.chart.dispose();
         this.createChart(chartData, rawData)
     }

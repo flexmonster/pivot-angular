@@ -54,7 +54,7 @@ export class CustomizingGridComponent implements OnInit {
             let backgroundColor = "#00A45A";
             let textShadowColor = "#095231";
             let borderColor = "#009552";
-            cell.style = { 
+            cell.style = {
                 ...cell.style,
                 "background-color": backgroundColor,
                 "color": "white",
@@ -67,7 +67,7 @@ export class CustomizingGridComponent implements OnInit {
     }
 
     removeCustomization() {
-        this.pivot.flexmonster.customizeCell(null!);
+        this.pivot.flexmonster.customizeCell(() => null);
     }
 
     applyCustomization() {
