@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CallingEventsComponent } from './examples/calling-events/calling-events.component';
+import { HandlingEventsComponent } from './examples/handling-events/handling-events.component';
 import { CustomizingGridComponent } from './examples/customizing-grid/customizing-grid.component';
 import { CustomizingToolbarComponent } from './examples/customizing-toolbar/customizing-toolbar.component';
 import { PivotTableDemoComponent } from './examples/pivot-table-demo/pivot-table-demo.component';
@@ -11,7 +11,7 @@ import { WithHighchartsComponent } from './examples/with-highcharts/with-highcha
 
 const routes: Routes = [
   { path: 'pivot-table-demo', component: PivotTableDemoComponent },
-  { path: 'calling-events', component: CallingEventsComponent },
+  { path: 'handling-events', component: HandlingEventsComponent },
   { path: 'using-api-calls', component: UsingApiCallsComponent },
   { path: 'updating-data', component: UpdatingDataComponent },
   { path: 'customizing-toolbar', component: CustomizingToolbarComponent },

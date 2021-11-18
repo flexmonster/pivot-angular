@@ -2,11 +2,11 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FlexmonsterPivot } from 'ng-flexmonster';
 
 @Component({
-    selector: 'app-calling-events',
-    templateUrl: './calling-events.component.html',
-    styleUrls: ['./calling-events.component.css']
+    selector: 'app-handling-events',
+    templateUrl: './handling-events.component.html',
+    styleUrls: ['./handling-events.component.css']
 })
-export class CallingEventsComponent implements OnInit {
+export class HandlingEventsComponent implements OnInit {
 
     @ViewChild('pivot') pivot!: FlexmonsterPivot;
     @ViewChild('logsContainer')

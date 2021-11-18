@@ -8,7 +8,7 @@ import { SideMenuComponent } from './common/side-menu/side-menu.component';
 import { ToggleButtonComponent } from './common/toggle-button/toggle-button.component';
 import { ToggleSwitchComponent } from './common/toggle-switch/toggle-switch.component';
 import { TopMenuComponent } from './common/top-menu/top-menu.component';
-import { CallingEventsComponent } from './examples/calling-events/calling-events.component';
+import { HandlingEventsComponent } from './examples/handling-events/handling-events.component';
 import { CustomizingGridComponent } from './examples/customizing-grid/customizing-grid.component';
 import { CustomizingToolbarComponent } from './examples/customizing-toolbar/customizing-toolbar.component';
 import { PivotTableDemoComponent } from './examples/pivot-table-demo/pivot-table-demo.component';
@@ -24,7 +24,7 @@ import { FormsModule } from '@angular/forms';
     TopMenuComponent,
     SideMenuComponent,
     PivotTableDemoComponent,
-    CallingEventsComponent,
+    HandlingEventsComponent,
     UsingApiCallsComponent,
     UpdatingDataComponent,
     CustomizingToolbarComponent,
