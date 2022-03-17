@@ -1,4 +1,4 @@
-# Flexmonster Pivot Table & Charts integration with Angular 5+ framework
+# Flexmonster Pivot Table & Charts integration with Angular
 [![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/landing.png)](http://flexmonster.com/?r=rm_ng)
 Website: [www.flexmonster.com](https://www.flexmonster.com/?r=rm_ng)
 
