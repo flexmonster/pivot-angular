@@ -42,6 +42,7 @@ body {
 
 .description-blocks {
     margin: 30px 0 30px 0;
+    max-width: 800px;
 }
 
 .section {
@@ -174,11 +175,11 @@ input[type="checkbox"i] {
 }
 
 .toggle-button .button-checkbox:checked+.button-checkbox-label .on {
-    color: #00a45a;
+    color: #454545;
 }
 
 .toggle-switch .button-checkbox:checked+.button-checkbox-label .on {
-    color: #df3800;
+    color: #454545;
 }
 
 .toggle-button .button-checkbox-label .on,
@@ -192,14 +193,14 @@ input[type="checkbox"i] {
     line-height: 32px;
     font-weight: 600;
     font-size: 16px;
-    color: #454545;
+    color: #b1b1b1;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .toggle-switch .button-checkbox-label .on {
-    color: #00a45a;
+    color: #454545;
 }
 
 /* Text */
