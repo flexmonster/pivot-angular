@@ -207,8 +207,8 @@ input[type="checkbox"i] {
 .page-title {
     margin-top: 0;
     margin-bottom: 18px;
-    font-size: 28px;
-    font-weight: normal;
+    font-size: 42px;
+    font-weight: 300;
     line-height: 1.35714;
     color: #555555;
 }
