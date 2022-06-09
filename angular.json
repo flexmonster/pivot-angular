@@ -17,6 +17,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "core-js",
+              "raf",
+              "xlsx",
+              "@babel/runtime",
+              "pdfmake"
+            ],
             "outputPath": "dist/pivot-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -102,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "pivot-angular"
+  "defaultProject": "pivot-angular",
+  "cli": {
+    "analytics": false
+  }
 }
