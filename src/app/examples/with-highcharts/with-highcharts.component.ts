@@ -115,8 +115,6 @@ export class WithHighchartsComponent implements OnInit {
 
     onReportComplete() {
         this.pivot.flexmonster.off("reportcomplete");
-        //this.pivot.flexmonster.drillUpCell("columns", [], "", "2018");
-        //this.pivot.flexmonster.drillUpCell("columns", [], "", "2019");
         this.drawChart();
     }
 
