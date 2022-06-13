@@ -8,7 +8,7 @@
 
 <div>
     <fm-pivot #pivot [toolbar]="true" [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
-        [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [height]="600"
+        (ready)="onReady()" [height]="600"
         [licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'" (reportcomplete)="onReportComplete()"
         (beforetoolbarcreated)="customizeToolbar($event)">
     </fm-pivot>

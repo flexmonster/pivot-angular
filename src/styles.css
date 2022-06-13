@@ -118,7 +118,7 @@ body {
     left: -5000px;
 }
 
-input[type="checkbox"i] {
+input[type="checkbox" i] {
     background-color: initial;
     cursor: default;
     appearance: checkbox;
@@ -297,7 +297,7 @@ p {
 
 /* Top menu */
 .mainheader {
-    padding: 7px 60px;
+    /* padding: 13px 60px; */
     position: absolute;
     font-size: 0;
     width: 100%;
@@ -332,20 +332,23 @@ p {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: justify;
-    justify-content: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: 100%;
+    max-width: 1920px;
+    min-width: 770px;
     margin: 0 auto;
+    position: relative;
+    height: 70px;
 }
 
 .mainheader .logo {
-    width: 225px;
+    margin-left: 32px;
     display: block;
-}
-
-.mainheader .logo {
+    position: absolute;
+    left: 0;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -380,6 +383,10 @@ ul {
     list-style: none;
 }
 
+.mainnav {
+    margin-left: 10px;
+}
+
 .mainnav li {
     margin-right: 20px;
 }
@@ -387,17 +394,28 @@ ul {
 .mainnav li {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 24px;
+    margin-right: 32px;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 1200px) {
+    .mainnav li {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
     .mainnav li {
         display: block;
+        margin-bottom: 3px;
+    }
+
+    .mainheader .container-xl {
+        height: 120px;
     }
 }
 
 .mainnav li a {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.35714;
     text-transform: uppercase;
     color: #454545;
