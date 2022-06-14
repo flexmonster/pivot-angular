@@ -22,83 +22,6 @@ export class WithHighchartsComponent implements OnInit {
         toolbar.showShareReportTab = true;
     }
 
-    public report: Object = {
-        dataSource: {
-            filename: "https://cdn.flexmonster.com/data/data.csv"
-        },
-        slice: {
-            rows: [
-                {
-                    uniqueName: "Country"
-                },
-                {
-                    uniqueName: "Business Type",
-                    filter: {
-                        exclude: ["business type.[value added reseller]"]
-                    }
-                },
-                {
-                    uniqueName: "[Measures]"
-                }
-            ],
-            columns: [
-                {
-                    uniqueName: "Category",
-                    filter: {
-                        exclude: ["category.[cars]"]
-                    }
-                },
-                {
-                    uniqueName: "Color",
-                    filter: {
-                        exclude: ["color.[white]", "color.[purple]"]
-                    }
-                }
-            ],
-            measures: [
-                {
-                    uniqueName: "Price",
-                    format: "empty"
-                }
-            ],
-            expands: {
-                rows: [
-                    {
-                        tuple: ["country.[united states]"]
-                    },
-                    {
-                        tuple: ["country.[canada]"]
-                    }
-                ],
-                columns: [
-                    {
-                        tuple: ["category.[accessories]"]
-                    }
-                ]
-            }
-        },
-        conditions: [
-            {
-                formula: "#value < 5000",
-                format: {
-                    backgroundColor: "#009688",
-                    color: "#FFFFFF"
-                }
-            }
-        ],
-        formats: [
-            {
-                name: "empty",
-                currencySymbol: "$",
-                nullValue: "-"
-            }
-        ]
-    };
-
-    onReady() {
-        this.pivot.flexmonster.setReport(this.report);
-    }
-
     drawChart() {
         this.pivot.flexmonster.highcharts?.getData(
             {
@@ -117,5 +40,4 @@ export class WithHighchartsComponent implements OnInit {
         this.pivot.flexmonster.off("reportcomplete");
         this.drawChart();
     }
-
 }

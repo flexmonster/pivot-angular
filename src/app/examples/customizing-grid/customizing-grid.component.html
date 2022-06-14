@@ -14,6 +14,6 @@
 
 <div>
     <fm-pivot #pivot [toolbar]="true" [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
-        [height]="600" (ready)="onReady()" [customizeCell]="customizeCellFunction"
+        [height]="600" [report]="'https://cdn.flexmonster.com/github/customizing-grid-report.json'" [customizeCell]="customizeCellFunction"
         (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
 </div>
