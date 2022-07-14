@@ -387,10 +387,6 @@ ul {
 }
 
 .mainnav li {
-    margin-right: 20px;
-}
-
-.mainnav li {
     display: inline-block;
     vertical-align: middle;
     margin-right: 32px;
