@@ -50,7 +50,7 @@ export class UpdatingDataComponent implements OnInit {
     }
 
     updateTheData() {
-        // If the data in Vue got updated, for example:
+        // If the data got updated, for example:
         this.data = [
             {
                 Category: "Accessories",
