@@ -7,10 +7,14 @@
 </div>
 
 <div>
-    <fm-pivot #pivot [toolbar]="true" [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
-        [height]="600" [report]="'https://cdn.flexmonster.com/github/demo-report.json'"
-        [licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'" (reportcomplete)="onReportComplete()"
-        (beforetoolbarcreated)="customizeToolbar($event)">
+    <fm-pivot #pivot
+              [toolbar]="true"
+              [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+              [height]="600"
+              [report]="'https://cdn.flexmonster.com/github/demo-report.json'"
+              [licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'"
+              (reportcomplete)="onReportComplete()"
+              (beforetoolbarcreated)="customizeToolbar($event)">
     </fm-pivot>
 </div>
 
