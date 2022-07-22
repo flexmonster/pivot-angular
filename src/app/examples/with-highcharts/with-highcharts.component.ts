@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FlexmonsterPivot } from 'ng-flexmonster';
 import * as Highcharts from 'highcharts';
-// Importing Flexmonster's connector for Highcharts
+// Importing Flexmonster Connector for Highcharts
 import "flexmonster/lib/flexmonster.highcharts.js";
 
 @Component({
