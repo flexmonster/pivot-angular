@@ -109,7 +109,6 @@
       }
     }
   },
-  "defaultProject": "pivot-angular",
   "cli": {
     "analytics": false
   }
