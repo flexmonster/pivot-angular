@@ -10,11 +10,11 @@ import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 import "flexmonster/lib/flexmonster.amcharts.js";
 
 @Component({
-    selector: 'app-with-amcharts',
-    templateUrl: './with-amcharts.component.html',
-    styleUrls: ['./with-amcharts.component.css']
+    selector: 'app-with-amcharts4',
+    templateUrl: './with-amcharts4.component.html',
+    styleUrls: ['./with-amcharts4.component.css']
 })
-export class WithAmchartsComponent implements OnInit {
+export class WithAmcharts4Component implements OnInit {
     @ViewChild('pivot') pivot!: FlexmonsterPivot;
 
     chart!: am4charts.PieChart;

@@ -1,0 +1,23 @@
+<h1 class="page-title">Integrating with amCharts</h1>
+
+<div class="description-blocks first-description-block">
+    <p>Extend Flexmonster’s visualization functionality by integrating with the amCharts library:  
+        <a href="https://www.flexmonster.com/doc/integration-with-amcharts/?r=rm_ng" target="_blank" class="title-link">Integration with amCharts</a>.
+    </p>
+</div>
+
+<div>
+    <fm-pivot #pivot
+              [toolbar]="true"
+              [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+              [height]="600"
+              [report]="'https://cdn.flexmonster.com/github/demo-report.json'"
+              [licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'"
+              (reportcomplete)="onReportComplete()"
+              (beforetoolbarcreated)="customizeToolbar($event)">
+    </fm-pivot>
+</div>
+
+<div class="chart-container">
+    <div id="amcharts-container" style="width: 100%; height: 500px;"></div>
+</div>
