@@ -10,11 +10,11 @@ import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import "flexmonster/lib/flexmonster.amcharts.js";
 
 @Component({
-    selector: 'app-with-amcharts5',
-    templateUrl: './with-amcharts5.component.html',
-    styleUrls: ['./with-amcharts5.component.css']
+    selector: 'app-with-amcharts',
+    templateUrl: './with-amcharts.component.html',
+    styleUrls: ['./with-amcharts.component.css']
 })
-export class WithAmcharts5Component implements OnInit {
+export class WithAmchartsComponent implements OnInit {
     @ViewChild('pivot') pivot!: FlexmonsterPivot;
 
     private flexmonster!: Flexmonster.Pivot;

@@ -15,7 +15,7 @@ import { PivotTableDemoComponent } from './examples/pivot-table-demo/pivot-table
 import { UpdatingDataComponent } from './examples/updating-data/updating-data.component';
 import { UsingApiCallsComponent } from './examples/using-api-calls/using-api-calls.component';
 import { WithAmcharts4Component } from './examples/with-amcharts4/with-amcharts4.component';
-import { WithAmcharts5Component } from './examples/with-amcharts5/with-amcharts5.component';
+import { WithAmchartsComponent } from './examples/with-amcharts/with-amcharts.component';
 import { WithHighchartsComponent } from './examples/with-highcharts/with-highcharts.component';
 import { FormsModule } from '@angular/forms';
 
@@ -32,7 +32,7 @@ import { FormsModule } from '@angular/forms';
     CustomizingGridComponent,
     WithHighchartsComponent,
     WithAmcharts4Component,
-    WithAmcharts5Component,
+    WithAmchartsComponent,
     ToggleButtonComponent,
     ToggleSwitchComponent
   ],

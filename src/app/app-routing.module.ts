@@ -7,7 +7,7 @@ import { PivotTableDemoComponent } from './examples/pivot-table-demo/pivot-table
 import { UpdatingDataComponent } from './examples/updating-data/updating-data.component';
 import { UsingApiCallsComponent } from './examples/using-api-calls/using-api-calls.component';
 import { WithAmcharts4Component } from './examples/with-amcharts4/with-amcharts4.component';
-import { WithAmcharts5Component } from './examples/with-amcharts5/with-amcharts5.component';
+import { WithAmchartsComponent } from './examples/with-amcharts/with-amcharts.component';
 import { WithHighchartsComponent } from './examples/with-highcharts/with-highcharts.component';
 
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'customizing-grid', component: CustomizingGridComponent },
   { path: 'with-highcharts', component: WithHighchartsComponent },
   { path: 'with-amcharts4', component: WithAmcharts4Component },
-  { path: 'with-amcharts5', component: WithAmcharts5Component },
+  { path: 'with-amcharts', component: WithAmchartsComponent },
   { path: '**', redirectTo: 'pivot-table-demo' }
 ];
 
