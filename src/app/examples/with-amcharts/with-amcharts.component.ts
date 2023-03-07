@@ -1,10 +1,10 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { FlexmonsterPivot } from 'ng-flexmonster';
 
-// Importing amCharts
-import * as am4core from '@amcharts/amcharts4/core';
-import * as am4charts from '@amcharts/amcharts4/charts';
-import am4themes_animated from '@amcharts/amcharts4/themes/animated';
+// amCharts imports
+import * as am5 from "@amcharts/amcharts5";
+import * as am5xy from "@amcharts/amcharts5/xy";
+import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
 // Importing Flexmonster Connector for amCharts
 import "flexmonster/lib/flexmonster.amcharts.js";
@@ -17,7 +17,8 @@ import "flexmonster/lib/flexmonster.amcharts.js";
 export class WithAmchartsComponent implements OnInit {
     @ViewChild('pivot') pivot!: FlexmonsterPivot;
 
-    chart!: am4charts.PieChart;
+    private flexmonster!: Flexmonster.Pivot;
+    private root!: am5.Root;
 
     public report: Flexmonster.Report = {
         dataSource: {
@@ -59,45 +60,76 @@ export class WithAmchartsComponent implements OnInit {
         this.drawChart();
     }
 
-    createChart(chartData: Flexmonster.GetDataValueObject, rawData: Flexmonster.GetDataValueObject) {
+    createChart = (chartData: Flexmonster.GetDataValueObject, rawData: Flexmonster.GetDataValueObject) => {
+
+        /* Create root element and chart instance */
+        this.root = am5.Root.new("amcharts-container");
+        let chart = this.root.container.children.push(am5xy.XYChart.new(this.root, {
+        }));
 
         /* Apply amCharts theme */
-        am4core.useTheme(am4themes_animated);
+        this.root.setThemes([
+            am5themes_Animated.new(this.root),
+        ]);
 
-        /* Create chart instance */
-        let chart = am4core.create("amcharts-container", am4charts.PieChart);
+        /* Apply number format from Flexmonster */
+        this.root.numberFormatter.set("numberFormat", this.pivot.flexmonster.amcharts?.getNumberFormatPattern((rawData.meta as any).formats[0]));
+
+        /* Create and configure Y axis */
+        let yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(this.root, {
+            categoryField: this.pivot.flexmonster.amcharts?.getCategoryName(rawData)!,
+            renderer: am5xy.AxisRendererY.new(this.root, {
+                cellStartLocation: 0.1,
+                cellEndLocation: 0.9
+            })
+        }));
+
+        /* Create and configure X axis */
+        let xAxis = chart.xAxes.push(am5xy.ValueAxis.new(this.root, {
+            renderer: am5xy.AxisRendererX.new(this.root, {}),
+        }));
+
+        xAxis.set("numberFormatter", am5.NumberFormatter.new(this.root, {
+            "numberFormat": "#a"
+        }));
+
+        /* Create and configure series for a bar chart */
+        let series = chart.series.push(am5xy.ColumnSeries.new(this.root, {
+            name: this.pivot.flexmonster.amcharts?.getMeasureNameByIndex(rawData, 0),
+            xAxis: xAxis,
+            yAxis: yAxis as any,
+            sequencedInterpolation: true,
+            valueXField: this.pivot.flexmonster.amcharts?.getMeasureNameByIndex(rawData, 0),
+            categoryYField: this.pivot.flexmonster.amcharts?.getCategoryName(rawData),
+            tooltip: am5.Tooltip.new(this.root, {
+                labelText: '{name}: [bold]{valueX}[/]'
+            })
+        }));
+
+        chart.set("cursor", am5xy.XYCursor.new(this.root, {
+            behavior: "none",
+            xAxis: xAxis,
+            yAxis: yAxis
+          }));
 
         /* Add data processed by Flexmonster to the chart */
-        chart.data = chartData.data;
-
-        /* Set an inner radius to transform a pie chart into a donut chart */
-        chart.innerRadius = am4core.percent(50);
-
-        /* Create and configure series for a pie chart */
-        var pieSeries = chart.series.push(new am4charts.PieSeries());
-        pieSeries.dataFields.category = this.pivot.flexmonster.amcharts?.getCategoryName(rawData);
-        pieSeries.dataFields.value = this.pivot.flexmonster.amcharts?.getMeasureNameByIndex(rawData, 0);
-        pieSeries.slices.template.stroke = am4core.color("#fff");
-        pieSeries.slices.template.strokeWidth = 2;
-        pieSeries.slices.template.strokeOpacity = 1;
+        yAxis.data.setAll(chartData.data);
+        series.data.setAll(chartData.data);
 
         /* Create initial animation */
-        pieSeries.hiddenState.properties.opacity = 1;
-        pieSeries.hiddenState.properties.endAngle = -90;
-        pieSeries.hiddenState.properties.startAngle = -90;
-
-        this.chart = chart;
+        series.appear(1000);
+        chart.appear(1000, 100);
     }
 
     updateChart(chartData: Flexmonster.GetDataValueObject, rawData: Flexmonster.GetDataValueObject) {
-        this.chart.dispose();
+        this.root.dispose();
         this.createChart(chartData, rawData)
     }
 
     ngOnDestroy() {
         // Clean up this.chart when the component is removed
-        if (this.chart) {
-            this.chart.dispose();
+        if (this.root) {
+            this.root.dispose();
         }
     }
 
