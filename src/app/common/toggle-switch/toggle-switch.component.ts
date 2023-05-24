@@ -7,8 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@
 })
 export class ToggleSwitchComponent implements OnInit {
   @Input() public _id!: string;
-  @Input() public labenOn!: string;
-  @Input() public labenOff!: string;
+  @Input() public labelOn!: string;
+  @Input() public labelOff!: string;
 
   @Output() public clicked: EventEmitter<boolean> = new EventEmitter<boolean>();
 

@@ -10,7 +10,7 @@
 </div>
 
 <div class="description-blocks">
-    <app-toggle-button [_id]="'eventsToggle'" [labenOn]="'Events are tracked'" [labenOff]="'Events are not tracked'"
+    <app-toggle-button [_id]="'eventsToggle'" [labelOn]="'Events are tracked'" [labelOff]="'Events are not tracked'"
         (clicked)="toggleEvents($event)"></app-toggle-button>
 </div>
 
@@ -32,5 +32,7 @@
             </div>
         </div>
     </div>
-    <button class="button-red" (click)="clearLogs()">Clear Log Output</button>
+    <div class="section--button"> 
+        <button class="button-red" (click)="clearLogs()">Clear Log Output</button>
+    </div>
 </div>
