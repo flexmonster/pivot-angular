@@ -1,0 +1,24 @@
+os:
+- linux
+language: node_js
+node_js:
+- '18'
+cache:
+  npm: false
+services:
+- xvfb
+dist: jammy
+addons:
+  chrome: stable
+before_install:
+- google-chrome-stable --port=9515 --headless --disable-gpu --remote-debugging-port=9222
+  http://localhost &
+beforescript:
+- git clone https://github.com/flexmonster/vue-integration-testing.git
+- chmod +x ./vue-integration-testing/launchScripts/angular.sh
+- chmod +x ./vue-integration-testing/launchScripts/angularTestLaunch.sh
+- chmod +x ./vue-integration-testing/launchScripts/angularKillPorts.sh
+script:
+- bash ./vue-integration-testing/launchScripts/angular.sh
+- bash ./vue-integration-testing/launchScripts/angularTestLaunch.sh
+- bash ./vue-integration-testing/launchScripts/angularKillPorts.sh
