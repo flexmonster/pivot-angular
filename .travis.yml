@@ -22,3 +22,8 @@ script:
 - bash ./vue-integration-testing/launchScripts/angular.sh
 - bash ./vue-integration-testing/launchScripts/angularTestLaunch.sh
 - bash ./vue-integration-testing/launchScripts/angularKillPorts.sh
+notifications:
+  slack:
+    rooms:
+      if: branch = master
+      secure: kvARUhEAMnvD8CxiO4G20auQ9hX7Hpgu/NdwX2uJ28z4KYptRvlPI2kPc49KcZepsrxcgwjCffOr5EU6wCVwnOebFWcASEnemz5EhyDtVyLdN8cihhIufpk2+qyekH4zceI4bb7hRqzll55cewVIlSVclZQ19qztEXO5zq47080JJZ1QW2PkEB+0WscIOm5Z2tppUfooLlt++bdmJllcW4NtW4VA+w1TT2KLvj0WYvs9xATBtvGulvKgjGdkuaA17x/FXVVz9YRPIPWcsn63TTNKNIp/syW/leV78tPn68zBqkFRJIwu2jkHjywl2TuvxWlqVIw8mTh9vQ1Illp0c4c1sUBP9p2afRy6aWFlfVD5YMCtdCM01v+YlknzvioKKjRpDV9KHVnJ/U4EYzL2Xa1q7TVWKUlFoleNsMoes8CgoOah5C2wtSfLMc4v11+VdkTs/XSMiMpbgN6Ypjv6qmOfKnM0SJ5X+i8RDgnM7TmojpDpU8J+oWSgydhiqgqvX1CPVnWAT6yKplzA8pZeIAmZ3fpQXMyFPH+G0MBHRPFJLvMS3E1kA1pxZmoSfJ6otBcEo4bpGUZUK9ppcI3nNdQYecDdnJ9Rh4nvqRKmK4paaQzb1uLCHwbz5PdkOdeCCXL1sSqUJlVzqxwwFbZIG8mXiyUmOr8vKCc8/xH4sgc=
