@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const filePath = path.join(__dirname, '../node_modules/flexmonster/flexmonster.full.js');
-const myVariable = process.env.MY_VARIABLE_NAME;
+const key = process.env.LICENSE_KEY;
 
 fs.readFile(filePath, 'utf8', (err, data) => {
   if (err) {
@@ -10,7 +10,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
     return;
   }
 
-  const modifiedData = `${data}\nwindow["flexmonsterpivottablekey"]="${myVariable}";`;
+  const modifiedData = `${data}\nwindow["flexmonsterpivottablekey"]="${key}";`;
 
   fs.writeFile(filePath, modifiedData, 'utf8', (err) => {
     if (err) {
@@ -18,6 +18,6 @@ fs.readFile(filePath, 'utf8', (err, data) => {
       return;
     }
 
-    console.log(`Environmental variable ${myVariable} written to file successfully.`);
+    console.log(`Environmental variable ${key} written to file successfully.`);
   });
 });
