@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FlexmonsterPivotModule } from 'ng-flexmonster';
+import { FlexmonsterPivotModule } from 'ngx-flexmonster';
 import { SideMenuComponent } from './common/side-menu/side-menu.component';
 import { ToggleButtonComponent } from './common/toggle-button/toggle-button.component';
 import { ToggleSwitchComponent } from './common/toggle-switch/toggle-switch.component';

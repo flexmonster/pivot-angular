@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FlexmonsterPivot } from 'ng-flexmonster';
+import { FlexmonsterPivot } from 'ngx-flexmonster';
 
 @Component({
     selector: 'app-customizing-grid',

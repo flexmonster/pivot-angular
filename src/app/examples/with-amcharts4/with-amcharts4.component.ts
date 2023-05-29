@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { FlexmonsterPivot } from 'ng-flexmonster';
+import { FlexmonsterPivot } from 'ngx-flexmonster';
 
 // Importing amCharts
 import * as am4core from '@amcharts/amcharts4/core';
