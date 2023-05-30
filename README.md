@@ -16,7 +16,7 @@ This repository holds the TypeScript source code for a simple [Angular](https://
 
 Node.js and npm are essential to Angular development. [Get them here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if they're not already installed on your machine.
  
-**Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
+**Verify that you are running at least node `v14.20.x` and npm `6.x.x`**
 by running `node -v` and `npm -v` in a terminal/console window. Older versions produce errors. We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of Node.js and npm.
 
 Then install the [Angular CLI](https://cli.angular.io/) globally by running:
@@ -27,10 +27,11 @@ npm install -g @angular/cli
 
 ## Installation
 
-1. Download the `.zip` archive with the sample project or clone it from GitHub with the following command:
+1. Download the `.zip` archive with the sample project or clone it from GitHub with the following commands:
 
 ```bash
-git clone https://github.com/flexmonster/pivot-angular.git && cd pivot-angular
+git clone -b ng-flexmonster https://github.com/flexmonster/pivot-angular.git pivot-angular
+cd pivot-angular
 ```
 
 2. Install the npm packages described in `package.json`:
