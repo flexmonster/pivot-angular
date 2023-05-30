@@ -15,13 +15,13 @@ before_install:
   http://localhost &
 beforescript:
 - git clone https://github.com/flexmonster/framework-integration-testing.git
-- chmod +x ./framework-integration-testing/launchScripts/angular.sh
-- chmod +x ./framework-integration-testing/launchScripts/angularTestLaunch.sh
-- chmod +x ./framework-integration-testing/launchScripts/angularKillPorts.sh
+- chmod +x ./framework-integration-testing/launchScripts/angular/angular.sh
+- chmod +x ./framework-integration-testing/launchScripts/angular/angularTestLaunch.sh
+- chmod +x ./framework-integration-testing/launchScripts/angular/angularKillPorts.sh
 script:
-- bash ./framework-integration-testing/launchScripts/angular.sh
-- bash ./framework-integration-testing/launchScripts/angularTestLaunch.sh
-- bash ./framework-integration-testing/launchScripts/angularKillPorts.sh
+- bash ./framework-integration-testing/launchScripts/angular/angular.sh
+- bash ./framework-integration-testing/launchScripts/angular/angularTestLaunch.sh
+- bash ./framework-integration-testing/launchScripts/angular/angularKillPorts.sh
 notifications:
   slack:
     rooms:
