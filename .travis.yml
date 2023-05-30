@@ -14,14 +14,14 @@ before_install:
 - google-chrome-stable --port=9515 --headless --disable-gpu --remote-debugging-port=9222
   http://localhost &
 beforescript:
-- git clone https://github.com/flexmonster/vue-integration-testing.git
-- chmod +x ./vue-integration-testing/launchScripts/angular.sh
-- chmod +x ./vue-integration-testing/launchScripts/angularTestLaunch.sh
-- chmod +x ./vue-integration-testing/launchScripts/angularKillPorts.sh
+- git clone https://github.com/flexmonster/framework-integration-testing.git
+- chmod +x ./framework-integration-testing/launchScripts/angular.sh
+- chmod +x ./framework-integration-testing/launchScripts/angularTestLaunch.sh
+- chmod +x ./framework-integration-testing/launchScripts/angularKillPorts.sh
 script:
-- bash ./vue-integration-testing/launchScripts/angular.sh
-- bash ./vue-integration-testing/launchScripts/angularTestLaunch.sh
-- bash ./vue-integration-testing/launchScripts/angularKillPorts.sh
+- bash ./framework-integration-testing/launchScripts/angular.sh
+- bash ./framework-integration-testing/launchScripts/angularTestLaunch.sh
+- bash ./framework-integration-testing/launchScripts/angularKillPorts.sh
 notifications:
   slack:
     rooms:
