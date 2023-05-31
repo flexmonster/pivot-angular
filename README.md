@@ -16,7 +16,7 @@ This repository holds the TypeScript source code for a simple [Angular](https://
 
 Node.js and npm are essential to Angular development. [Get them here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if they're not already installed on your machine.
  
-**Verify that you are running at least node `v16.x.x` and npm `6.x.x`**
+**Verify that you are running at least node `v16.14.x` and npm `6.x.x`**
 by running `node -v` and `npm -v` in a terminal/console window. Older versions produce errors. We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of Node.js and npm.
 
 Then install the [Angular CLI](https://cli.angular.io/) globally by running:
