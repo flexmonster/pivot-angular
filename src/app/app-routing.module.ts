@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'customizing-grid', component: CustomizingGridComponent },
   { path: 'with-highcharts', component: WithHighchartsComponent },
   { path: 'with-amcharts4', component: WithAmcharts4Component },
-  { path: 'with-amcharts', component: WithAmcharts4Component },
+  { path: 'with-amcharts', component: WithAmchartsComponent },
   { path: '**', redirectTo: 'pivot-table-demo' }
 ];
 
