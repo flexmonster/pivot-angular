@@ -44,5 +44,5 @@ To see the result, open `http://localhost:4200/` in your browser.
 
 ## Related Flexmonster docs
 
-- Learn how to integrate Flexmonster with an Angular project in the [Integration with Angular](https://www.flexmonster.com/doc/integration-with-angular/?r=gh_ng) guide.
-- For details on Flexmonster usage, refer to the [Usage examples in Angular](https://www.flexmonster.com/doc/flexmonster-in-angular/?r=gh_ng) guide.
+- [Integration with Angular](https://www.flexmonster.com/doc/integration-with-angular/?r=gh_ng) — learn how to integrate Flexmonster into an Angular project.
+- [Usage examples in Angular](https://www.flexmonster.com/doc/flexmonster-in-angular/?r=gh_ng) — see details on Flexmonster usage.
