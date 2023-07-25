@@ -14,7 +14,7 @@ before_install:
 - google-chrome-stable --port=9515 --headless --disable-gpu --remote-debugging-port=9222
   http://localhost &
 beforescript:
-- git clone https://github.com/flexmonster/framework-integration-testing.git
+- git clone -b develop https://github.com/flexmonster/framework-integration-testing.git
 - chmod +x ./framework-integration-testing/launchScripts/angular/angular.sh
 - chmod +x ./framework-integration-testing/launchScripts/angular/angularTestLaunch.sh
 - chmod +x ./framework-integration-testing/launchScripts/angular/angularKillPorts.sh
