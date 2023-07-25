@@ -2,12 +2,19 @@ os:
 - linux
 language: node_js
 node_js:
+- 'node'
+- 'lts/*'
+- '19'
 - '18'
 cache:
   npm: false
 services:
 - xvfb
 dist: jammy
+jobs:
+  fast_finish: true
+env:
+- ISOLATED=true
 addons:
   chrome: stable
 before_install:
