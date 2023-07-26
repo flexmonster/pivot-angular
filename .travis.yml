@@ -1,5 +1,6 @@
 os:
 - linux
+- windows
 language: node_js
 node_js:
 - 'node'
@@ -11,8 +12,6 @@ cache:
 services:
 - xvfb
 dist: jammy
-jobs:
-  fast_finish: true
 env:
 - ISOLATED=true
 addons:
@@ -20,7 +19,7 @@ addons:
 before_install:
 - google-chrome-stable --port=9515 --headless --disable-gpu --remote-debugging-port=9222
   http://localhost &
-beforescript:
+before_script:
 - git clone -b develop https://github.com/flexmonster/framework-integration-testing.git
 - chmod +x ./framework-integration-testing/launchScripts/angular/angular.sh
 - chmod +x ./framework-integration-testing/launchScripts/angular/angularTestLaunch.sh
