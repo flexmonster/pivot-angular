@@ -8,7 +8,7 @@ Flexmonster Pivot is a powerful JavaScript tool for interactive web reporting. I
 
 This repository contains a sample [Angular](https://angular.io/) project for Flexmonster Pivot Table & Charts.
 
-**Note:** This version of the project uses the [ngx-flexmonster](https://github.com/flexmonster/ngx-flexmonster) wrapper, which is [Ivy-compatible](https://docs.angular.lat/guide/ivy). Switch to the [ng-flexmonster](https://github.com/flexmonster/pivot-angular/tree/ng-flexmonster) branch for the project with the legacy [ng-flexmonster](https://github.com/flexmonster/ng-flexmonster) wrapper.
+**Note:** This version of the project uses the [ngx-flexmonster](https://github.com/flexmonster/ngx-flexmonster) wrapper, which is Ivy-compatible. Switch to the [ng-flexmonster](https://github.com/flexmonster/pivot-angular/tree/ng-flexmonster) branch for the project with the legacy `ng-flexmonster` wrapper.
 
 Table of contents:
 
@@ -18,7 +18,7 @@ Table of contents:
 
 ## Prerequisites
 
-- [Node.js 16 or later](https://nodejs.org/en/)
+- [Node.js 16 through 18](https://nodejs.org/en/)
 
 ## Installation
 
