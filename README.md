@@ -18,7 +18,7 @@ Table of contents:
 
 ## Prerequisites
 
-- [Node.js 16 through 18](https://nodejs.org/en/)
+- [Node.js 18 through 20](https://nodejs.org/en/)
 
 ## Installation
 
