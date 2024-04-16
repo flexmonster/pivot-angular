@@ -53,12 +53,12 @@ To see the result, open `http://localhost:4200/` in your browser.
 
 Angular sample project contains several examples of Flexmonster Pivot usage and customization:
 
-- **Pivot table demo** shows how to define the `report`, `toolbar`, `height`, `beforetoolbarcreated`, and `shareReportConnection` initialization parameters. 
+- **Pivot table demo** shows how to define the `report`, `toolbar`, `height`, `beforetoolbarcreated`, and `shareReportConnection` initialization parameters in the pivot grid for Angular. 
 - **Handling events** demonstrates how to subscribe to events and unsubscribe from them. 
 - **Using API calls** illustrates how to use Flexmonster's methods. 
 - **Updating data** is an example of using the `updateData()` method.
 - **Customizing the Toolbar** illustrates how to customize the Toolbar.
-- **Customizing the grid** shows how to customize the grid using the `customizeCell()` API call.
+- **Customizing the grid** shows how to customize the pivot table using the `customizeCell()` API call.
 - **Integration with Highcharts** demonstrates how to integrate with the Highcharts charting library.
 - **Integration with amCharts** is an example of integration with the amCharts charting library.
   
