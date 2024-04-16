@@ -1,5 +1,5 @@
 # Angular pivot table | Flexmonster Pivot Table & Charts sample project with Angular
-[![Flexmonster Pivot Table & Charts](https://static.flexmonster.com/uploads/2023/09/07151104/angular.png)](https://www.flexmonster.com?r=gh_ng)
+[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/readmes/angular.webp)](https://www.flexmonster.com?r=gh_ng)
 Website: [flexmonster.com](https://www.flexmonster.com?r=gh_ng)
 
 [![NPM](https://img.shields.io/npm/v/ngx-flexmonster)](https://www.npmjs.com/package/ngx-flexmonster)
