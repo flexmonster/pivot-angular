@@ -1,12 +1,11 @@
 # Angular pivot table | Flexmonster Pivot Table & Charts sample project with Angular
-[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/readmes/angular.webp)](https://www.flexmonster.com?r=gh_ng)
-Website: [flexmonster.com](https://www.flexmonster.com?r=gh_ng)
+[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/readmes/angular.webp)](https://www.flexmonster.com?r=sample_ng)
+Website: [flexmonster.com](https://www.flexmonster.com?r=sample_ng)
 
-[![NPM](https://img.shields.io/npm/v/ngx-flexmonster)](https://www.npmjs.com/package/ngx-flexmonster)
 [![Github Stars](https://img.shields.io/github/stars/flexmonster?style=social)](https://github.com/flexmonster) [![Twitter](https://img.shields.io/twitter/follow/Flexmonster?style=social)](https://twitter.com/Flexmonster)
 
 ## Flexmonster Pivot Table & Charts
-Flexmonster Pivot Table & Charts is a powerful and fully customizable JavaScript component for web reporting. It is packed with all core features for data analysis and can easily become a part of your Angular data visualization project. The tool supports popular frameworks like Angular, React, Vue, Blazor, and [more](https://www.flexmonster.com/doc/available-tutorials-integration?r=gh_ng). Also, Flexmonster connects to any data source, including SQL and NoSQL databases, JSON and CSV files, OLAP cubes, and Elasticsearch. 
+Flexmonster Pivot Table & Charts is a powerful and fully customizable JavaScript component for web reporting. It is packed with all core features for data analysis and can easily become a part of your Angular data visualization project. The tool supports popular frameworks like Angular, React, Vue, Blazor, and [more](https://www.flexmonster.com/doc/available-tutorials-integration?r=sample_ng). Also, Flexmonster connects to any data source, including SQL and NoSQL databases, JSON and CSV files, OLAP cubes, and Elasticsearch. 
 
 This repository contains a sample [Angular](https://angular.io/) project for Flexmonster Pivot Table & Charts.
 
@@ -66,23 +65,23 @@ You can try all of these examples right from the project’s starting page.
 
 ## Related Flexmonster docs
 
-- [Integration with Angular](https://www.flexmonster.com/doc/integration-with-angular/?r=gh_ng) — learn how to integrate Flexmonster into an Angular project.
-- [Usage examples in Angular](https://www.flexmonster.com/doc/flexmonster-in-angular/?r=gh_ng) — see details on Flexmonster usage.
+- [Integration with Angular](https://www.flexmonster.com/doc/integration-with-angular/?r=sample_ng) — learn how to integrate Flexmonster into an Angular project.
+- [Usage examples in Angular](https://www.flexmonster.com/doc/flexmonster-in-angular/?r=sample_ng) — see details on Flexmonster usage.
 
 ## Support and feedback
 
-In case of any issues, visit our [troubleshooting section](https://www.flexmonster.com/doc/typical-errors?r=gh_ng). You can also search among the [resolved cases](https://www.flexmonster.com/technical-support?r=gh_ng) for a solution to your problem.
+In case of any issues, visit our [troubleshooting section](https://www.flexmonster.com/doc/typical-errors?r=sample_ng). You can also search among the [resolved cases](https://www.flexmonster.com/technical-support?r=sample_ng) for a solution to your problem.
 
-To share your feedback or ask questions, contact our Tech team by raising a ticket on [Flexmonster Help Center](https://www.flexmonster.com/help-center?r=gh_ng). You can also find a list of samples, technical specifications, and a user interface guide there.
+To share your feedback or ask questions, contact our Tech team by raising a ticket on [Flexmonster Help Center](https://www.flexmonster.com/help-center?r=sample_ng). You can also find a list of samples, technical specifications, and a user interface guide there.
 
 ## Flexmonster licensing
 
-This sample project uses [Flexmonster Angular wrapper](https://github.com/flexmonster/ng-flexmonster?=gh_ng), which is released as an MIT-licensed (free and open-source) add-on to Flexmonster Pivot.
+This sample project uses [Flexmonster Angular wrapper](https://github.com/flexmonster/ng-flexmonster), which is released as an MIT-licensed (free and open-source) add-on to Flexmonster Pivot.
 
-To learn about Flexmonster Pivot licenses, visit the [Flexmonster licensing page](https://www.flexmonster.com/pivot-table-editions-and-pricing?r=gh_ng). 
+To learn about Flexmonster Pivot licenses, visit the [Flexmonster licensing page](https://www.flexmonster.com/pivot-table-editions-and-pricing?r=sample_ng). 
 If you want to test our product, we provide a 30-day free trial.
 
-If you need any help with your license — fill out our [Contact form](https://www.flexmonster.com/contact-our-team?r=gh_ng), and we will get in touch with you.
+If you need any help with your license — fill out our [Contact form](https://www.flexmonster.com/contact-our-team?r=sample_ng), and we will get in touch with you.
 
 ## Social media
 
