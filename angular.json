@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pivot-angular:build:production"
+              "buildTarget": "pivot-angular:build:production"
             },
             "development": {
-              "browserTarget": "pivot-angular:build:development"
+              "buildTarget": "pivot-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,24 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pivot-angular:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "browserTarget": "pivot-angular:build:production,development"
           }
         }
       }
