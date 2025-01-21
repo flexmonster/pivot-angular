@@ -4,7 +4,8 @@ import { FlexmonsterPivot } from 'ngx-flexmonster';
 @Component({
     selector: 'app-handling-events',
     templateUrl: './handling-events.component.html',
-    styleUrls: ['./handling-events.component.css']
+    styleUrls: ['./handling-events.component.css'],
+    standalone: false
 })
 export class HandlingEventsComponent implements OnInit {
 

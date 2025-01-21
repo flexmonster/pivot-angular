@@ -4,7 +4,8 @@ import { FlexmonsterPivot } from 'ngx-flexmonster';
 @Component({
     selector: 'app-customizing-grid',
     templateUrl: './customizing-grid.component.html',
-    styleUrls: ['./customizing-grid.component.css']
+    styleUrls: ['./customizing-grid.component.css'],
+    standalone: false
 })
 export class CustomizingGridComponent implements OnInit {
 

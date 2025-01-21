@@ -4,7 +4,8 @@ import { FlexmonsterPivot } from 'ngx-flexmonster';
 @Component({
     selector: 'app-updating-data',
     templateUrl: './updating-data.component.html',
-    styleUrls: ['./updating-data.component.css']
+    styleUrls: ['./updating-data.component.css'],
+    standalone: false
 })
 export class UpdatingDataComponent implements OnInit {
 

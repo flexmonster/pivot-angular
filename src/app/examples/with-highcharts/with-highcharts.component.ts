@@ -8,7 +8,8 @@ import "flexmonster/lib/flexmonster.highcharts.js";
 @Component({
     selector: 'app-with-highcharts',
     templateUrl: './with-highcharts.component.html',
-    styleUrls: ['./with-highcharts.component.css']
+    styleUrls: ['./with-highcharts.component.css'],
+    standalone: false
 })
 export class WithHighchartsComponent implements OnInit {
 

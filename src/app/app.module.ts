@@ -11,7 +11,6 @@ import { TopMenuComponent } from './common/top-menu/top-menu.component';
 import { HandlingEventsComponent } from './examples/handling-events/handling-events.component';
 import { CustomizingGridComponent } from './examples/customizing-grid/customizing-grid.component';
 import { CustomizingToolbarComponent } from './examples/customizing-toolbar/customizing-toolbar.component';
-import { PivotTableDemoComponent } from './examples/pivot-table-demo/pivot-table-demo.component';
 import { UpdatingDataComponent } from './examples/updating-data/updating-data.component';
 import { UsingApiCallsComponent } from './examples/using-api-calls/using-api-calls.component';
 import { WithAmcharts4Component } from './examples/with-amcharts4/with-amcharts4.component';
@@ -24,7 +23,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     TopMenuComponent,
     SideMenuComponent,
-    PivotTableDemoComponent,
     HandlingEventsComponent,
     UsingApiCallsComponent,
     UpdatingDataComponent,

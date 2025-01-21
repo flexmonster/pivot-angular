@@ -4,7 +4,8 @@ import { FlexmonsterPivot } from 'ngx-flexmonster';
 @Component({
     selector: 'app-customizing-toolbar',
     templateUrl: './customizing-toolbar.component.html',
-    styleUrls: ['./customizing-toolbar.component.css']
+    styleUrls: ['./customizing-toolbar.component.css'],
+    standalone: false
 })
 export class CustomizingToolbarComponent implements OnInit {
 

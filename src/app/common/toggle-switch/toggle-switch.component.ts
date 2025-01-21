@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-toggle-switch',
-  templateUrl: './toggle-switch.component.html',
-  styleUrls: ['./toggle-switch.component.css']
+    selector: 'app-toggle-switch',
+    templateUrl: './toggle-switch.component.html',
+    styleUrls: ['./toggle-switch.component.css'],
+    standalone: false
 })
 export class ToggleSwitchComponent implements OnInit {
   @Input() public _id!: string;

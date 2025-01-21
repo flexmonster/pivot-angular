@@ -4,7 +4,8 @@ import { FlexmonsterPivot } from 'ngx-flexmonster';
 @Component({
     selector: 'app-using-api-calls',
     templateUrl: './using-api-calls.component.html',
-    styleUrls: ['./using-api-calls.component.css']
+    styleUrls: ['./using-api-calls.component.css'],
+    standalone: false
 })
 export class UsingApiCallsComponent implements OnInit {
 
