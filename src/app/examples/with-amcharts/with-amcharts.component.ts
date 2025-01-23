@@ -12,7 +12,8 @@ import "flexmonster/lib/flexmonster.amcharts.js";
 @Component({
     selector: 'app-with-amcharts',
     templateUrl: './with-amcharts.component.html',
-    styleUrls: ['./with-amcharts.component.css']
+    styleUrls: ['./with-amcharts.component.css'],
+    standalone: false
 })
 export class WithAmchartsComponent implements OnInit {
     @ViewChild('pivot') pivot!: FlexmonsterPivot;
