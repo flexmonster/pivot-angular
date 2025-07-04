@@ -7,7 +7,7 @@ cache:
   npm: false
 services:
 - xvfb
-dist: xenial
+dist: noble
 addons:
   chrome: stable
 before_install:
