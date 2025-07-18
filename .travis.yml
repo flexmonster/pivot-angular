@@ -7,7 +7,7 @@ cache:
   npm: false
 services:
 - xvfb
-dist: trusty
+dist: jammy
 addons:
   chrome: stable
 before_install:
