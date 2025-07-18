@@ -2,12 +2,12 @@ os:
 - linux
 language: node_js
 node_js:
-- '20'
+- '22'
 cache:
   npm: false
 services:
 - xvfb
-dist: jammy
+dist: trusty
 addons:
   chrome: stable
 before_install:
