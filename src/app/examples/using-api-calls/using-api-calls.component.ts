@@ -1,62 +1,56 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FlexmonsterPivot } from 'ngx-flexmonster';
+import { Component, viewChild } from "@angular/core";
+import { FlexmonsterPivot, FlexmonsterPivotModule } from "ngx-flexmonster";
+import { ToggleSwitchComponent } from "../../common/toggle-switch/toggle-switch.component";
 
 @Component({
-    selector: 'app-using-api-calls',
-    templateUrl: './using-api-calls.component.html',
-    styleUrls: ['./using-api-calls.component.css'],
-    standalone: false
+  selector: "app-using-api-calls",
+  templateUrl: "./using-api-calls.component.html",
+  styleUrls: ["./using-api-calls.component.css"],
+  imports: [ToggleSwitchComponent, FlexmonsterPivotModule],
+  standalone: true,
 })
-export class UsingApiCallsComponent implements OnInit {
+export class UsingApiCallsComponent {
+  readonly pivot = viewChild.required<FlexmonsterPivot>("pivot");
 
-    @ViewChild('pivot')
-    pivot!: FlexmonsterPivot;
+  customizeToolbar(toolbar: Flexmonster.Toolbar) {
+    toolbar.showShareReportTab = true;
+  }
 
-    constructor() { }
-
-    ngOnInit(): void {
+  toggleView(checked: boolean) {
+    if (checked) {
+      this.showGrid();
+    } else {
+      this.showChart();
     }
+  }
 
-    customizeToolbar(toolbar: Flexmonster.Toolbar) {
-        toolbar.showShareReportTab = true;
+  toggleMode(checked: boolean) {
+    if (checked) {
+      this.interactive();
+    } else {
+      this.readOnly();
     }
+  }
 
-    toggleView(checked: boolean) {
-        if (checked) {
-            this.showGrid();
-        } else {
-            this.showChart();
-        }
-    }
+  showChart() {
+    this.pivot().flexmonster.showCharts("column");
+  }
 
-    toggleMode(checked: boolean) {
-        if (checked) {
-            this.interactive();
-        } else {
-            this.readOnly();
-        }
-    }
+  showGrid() {
+    this.pivot().flexmonster.showGrid();
+  }
 
-    showChart() {
-        this.pivot.flexmonster.showCharts("column");
-    }
+  readOnly() {
+    this.pivot().flexmonster.setOptions({
+      readOnly: true,
+    });
+    this.pivot().flexmonster.refresh();
+  }
 
-    showGrid() {
-        this.pivot.flexmonster.showGrid();
-    }
-
-    readOnly() {
-        this.pivot.flexmonster.setOptions({
-            readOnly: true
-        });
-        this.pivot.flexmonster.refresh();
-    }
-    
-    interactive() {
-        this.pivot.flexmonster.setOptions({
-            readOnly: false
-        });
-        this.pivot.flexmonster.refresh();
-    }
-
+  interactive() {
+    this.pivot().flexmonster.setOptions({
+      readOnly: false,
+    });
+    this.pivot().flexmonster.refresh();
+  }
 }

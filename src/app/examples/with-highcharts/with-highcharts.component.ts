@@ -1,45 +1,47 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FlexmonsterPivot } from 'ngx-flexmonster';
+import { Component, viewChild } from "@angular/core";
+import { FlexmonsterPivot, FlexmonsterPivotModule } from "ngx-flexmonster";
+
 // Importing Highcharts
-import * as Highcharts from 'highcharts';
+import { HighchartsChartComponent } from "highcharts-angular";
+import "highcharts/esm/modules/accessibility";
+
 // Importing Flexmonster Connector for Highcharts
 import "flexmonster/lib/flexmonster.highcharts.js";
 
 @Component({
-    selector: 'app-with-highcharts',
-    templateUrl: './with-highcharts.component.html',
-    styleUrls: ['./with-highcharts.component.css'],
-    standalone: false
+  selector: "app-with-highcharts",
+  templateUrl: "./with-highcharts.component.html",
+  styleUrls: ["./with-highcharts.component.css"],
+  imports: [FlexmonsterPivotModule, HighchartsChartComponent],
+  standalone: true,
 })
-export class WithHighchartsComponent implements OnInit {
+export class WithHighchartsComponent {
+  readonly pivot = viewChild.required<FlexmonsterPivot>("pivot");
+  chartOptions: Highcharts.Options = {};
+  updateFlag: boolean = false;
 
-    @ViewChild('pivot') pivot!: FlexmonsterPivot;
+  customizeToolbar(toolbar: Flexmonster.Toolbar) {
+    toolbar.showShareReportTab = true;
+  }
 
-    constructor() { }
+  onReportComplete() {
+    this.pivot().flexmonster.off("reportcomplete");
+    this.drawChart();
+  }
 
-    ngOnInit(): void {
-    }
-
-    customizeToolbar(toolbar: Flexmonster.Toolbar) {
-        toolbar.showShareReportTab = true;
-    }
-
-    drawChart() {
-        this.pivot.flexmonster.highcharts?.getData(
-            {
-                type: "spline"
-            },
-            (data: Flexmonster.GetDataValueObject) => {
-                Highcharts.chart('highcharts-container', <Highcharts.Options>data);
-            },
-            (data: Flexmonster.GetDataValueObject) => {
-                Highcharts.chart('highcharts-container', <Highcharts.Options>data);
-            }
-        );
-    }
-
-    onReportComplete() {
-        this.pivot.flexmonster.off("reportcomplete");
-        this.drawChart();
-    }
+  drawChart() {
+    this.pivot().flexmonster.highcharts?.getData(
+      {
+        type: "spline",
+      },
+      (data: Flexmonster.GetDataValueObject) => {
+        this.chartOptions = <Highcharts.Options>data;
+        this.updateFlag = true;
+      },
+      (data: Flexmonster.GetDataValueObject) => {
+        this.chartOptions = <Highcharts.Options>data;
+        this.updateFlag = true;
+      }
+    );
+  }
 }

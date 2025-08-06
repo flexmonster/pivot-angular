@@ -1,19 +1,29 @@
 <h1 class="page-title">Customizing the grid</h1>
 
 <div class="description-blocks first-description-block">
-    <p>Style the grid by adding links, applying custom CSS, or formatting the cells. Check our docs for details: 
-        <a href="https://www.flexmonster.com/doc/customizing-grid/?r=rm_ng" target="_blank" class="title-link">Customizing the grid</a>.
-    </p>
-    <p>In this demo, the <strong>Price</strong> measure is customized.</p>
+  <p>Style the grid by adding links, applying custom CSS, or formatting the cells. Check our docs for details:
+    <a href="https://www.flexmonster.com/doc/customizing-grid/?r=rm_ng" target="_blank" class="title-link">Customizing
+      the grid cells</a>.
+  </p>
+  <p>In this demo, the <strong>Price</strong> measure is customized.</p>
 </div>
 
 <div class="description-blocks">
-    <app-toggle-button (clicked)="toggleCustomization($event)" [labelOn]="'The grid cells are customized'"
-        [labelOff]="'The grid cells are not customized'" [_id]="'customizationToggle'"></app-toggle-button>
+  <app-toggle-button
+    (clicked)="toggleCustomization($event)"
+    [labelOn]="'The grid cells are customized'"
+    [labelOff]="'The grid cells are not customized'"
+    [_id]="'customizationToggle'"
+  />
 </div>
 
 <div>
-    <fm-pivot #pivot [toolbar]="true" [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
-        [height]="600" [report]="'https://cdn.flexmonster.com/github/customizing-grid-report.json'" [customizeCell]="customizeCellFunction"
-        (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
+  <fm-pivot #pivot
+    [toolbar]="true"
+    [height]="600"
+    [report]="'https://cdn.flexmonster.com/github/customizing-grid-report.json'" 
+    [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+    [customizeCell]="customizeCellFunction"
+    (beforetoolbarcreated)="customizeToolbar($event)"
+  />
 </div>
