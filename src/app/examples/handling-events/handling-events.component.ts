@@ -15,7 +15,7 @@ export class HandlingEventsComponent {
   readonly logsContainer = viewChild.required<ElementRef<HTMLElement>>("logsContainer");
 
   public logs: {
-    id?: string;
+    id: string;
     date: Date;
     event: string;
   }[] = [];
