@@ -1,24 +1,32 @@
 <h1 class="page-title">Using Flexmonster API calls</h1>
 
 <div class="description-blocks first-description-block">
-    <p>
-        Flexmonster provides <a href="https://www.flexmonster.com/api/methods/?r=rm_ng" target="_blank" class="title-link">API calls</a> 
-        for interacting with the component. 
-        As an example, we've added the toggle buttons below. Use them to switch between the views or make Flexmonster read-only.
-    </p>
+  <p>
+    Flexmonster provides <a href="https://www.flexmonster.com/api/methods/?r=rm_ng" target="_blank"
+      class="title-link">API calls</a> for interacting with the component. As an example, we've added 
+      the toggle buttons below. Use them to switch between the views or make Flexmonster read-only.
+  </p>
 </div>
 
 <div class="description-blocks">
-    <app-toggle-switch [_id]="'viewToggle'" (clicked)="toggleView($event)" [labelOn]="'Grid'"
-        [labelOff]="'Column chart'">
-    </app-toggle-switch>
-    <app-toggle-switch [_id]="'modeToggle'" (clicked)="toggleMode($event)" [labelOn]="'Interactive'"
-        [labelOff]="'Read-only'">
-    </app-toggle-switch>
+  <app-toggle-switch [_id]="'viewToggle'"
+    (clicked)="toggleView($event)"
+    [labelOn]="'Grid'"
+    [labelOff]="'Column chart'"
+  />
+  <app-toggle-switch [_id]="'modeToggle'"
+    (clicked)="toggleMode($event)"
+    [labelOn]="'Interactive'"
+    [labelOff]="'Read-only'"
+  />
 </div>
 
 <div>
-    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [toolbar]="true"
-        [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}" [height]="600"
-        (beforetoolbarcreated)="customizeToolbar($event)"></fm-pivot>
+  <fm-pivot #pivot
+    [toolbar]="true"
+    [height]="600"
+    [report]="'https://cdn.flexmonster.com/github/demo-report.json'"
+    [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+    (beforetoolbarcreated)="customizeToolbar($event)"
+  />
 </div>

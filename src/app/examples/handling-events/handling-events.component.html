@@ -1,38 +1,46 @@
 <h1 class="page-title">Handling Flexmonster events</h1>
 
 <div class="description-blocks first-description-block">
-    <p>
-        Perform an action (for example, click on a grid cell) to trigger a
-        <a target="blank" class="title-link" href="https://www.flexmonster.com/api/events/?r=rm_ng">Flexmonster
-            event</a>.
-        Scroll down to the log output to see which events get triggered.
-    </p>
+  <p>
+    Perform an action (for example, click on a grid cell) to trigger a
+    <a target="blank" class="title-link" href="https://www.flexmonster.com/api/events/?r=rm_ng">Flexmonster
+      event</a>. Scroll down to the log output to see which events get triggered.
+  </p>
 </div>
 
 <div class="description-blocks">
-    <app-toggle-button [_id]="'eventsToggle'" [labelOn]="'Events are tracked'" [labelOff]="'Events are not tracked'"
-        (clicked)="toggleEvents($event)"></app-toggle-button>
+  <app-toggle-button [_id]="'eventsToggle'"
+    [labelOn]="'Events are tracked'"
+    [labelOff]="'Events are not tracked'"
+    (clicked)="toggleEvents($event)"
+  />
 </div>
 
 <div>
-    <fm-pivot #pivot [report]="'https://cdn.flexmonster.com/github/demo-report.json'" [toolbar]="true"
-        [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}" [height]="600" (ready)="signOnAllEvents()"
-        (beforetoolbarcreated)="customizeToolbar($event)">
-    </fm-pivot>
+  <fm-pivot #pivot
+    [toolbar]="true"
+    [height]="600"
+    [report]="'https://cdn.flexmonster.com/github/demo-report.json'"
+    [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+    (ready)="signOnAllEvents()"
+    (beforetoolbarcreated)="customizeToolbar($event)"
+  />
 </div>
 
 <div class="section">
-    <h3 class="title-4">Log Output</h3>
-    <div #logsContainer class="event-logs-wrapper fullwidth">
-        <div class="content">
-            <div *ngFor="let log of logs" class="log">
-                <span class="log-label">[ Event ] {{ log.date | date:'mediumTime' }}: </span>
-                {{ log.event }} [ <a class="log-link" target="_blank"
-                    href="https://www.flexmonster.com/api/{{ log.event }}/?r=rm_ng">see details</a> ]
-            </div>
+  <h3 class="title-4">Log Output</h3>
+  <div class="event-logs-wrapper fullwidth">
+    <div #logsContainer class="content">
+      @for (log of logs; track log.id) {
+        <div class="log">
+          <span class="log-label">[ Event ] {{ log.date | date: "mediumTime" }}: </span>
+          {{ log.event }} [ <a class="log-link" target="_blank"
+            href="https://www.flexmonster.com/api/{{ log.event }}/?r=rm_ng">see details</a> ]
         </div>
+      }
     </div>
-    <div class="section--button"> 
-        <button class="button-red" (click)="clearLogs()">Clear Log Output</button>
-    </div>
+  </div>
+  <div class="section--button">
+    <button class="button-red" (click)="clearLogs()">Clear Log Output</button>
+  </div>
 </div>

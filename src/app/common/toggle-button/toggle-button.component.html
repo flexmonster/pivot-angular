@@ -1,7 +1,7 @@
-<div [id]="_id" class="toggle-button noselect">
-  <input [id]="_id+'Button'" class="button-checkbox" type="checkbox" [(ngModel)]="checked" (change)="onChange()"
+<div [id]="_id()" class="toggle-button noselect">
+  <input [id]="_id()+'Button'" class="button-checkbox" type="checkbox" [(ngModel)]="checked" (change)="onChange()"
     checked />
-  <label [for]="_id+'Button'" class="button-checkbox-label">
-    <span class="on">{{ checked ? labelOn : labelOff }}</span>
+  <label [for]="_id()+'Button'" class="button-checkbox-label">
+    <span class="on">{{ checked ? labelOn() : labelOff() }}</span>
   </label>
 </div>

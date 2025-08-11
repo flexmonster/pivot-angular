@@ -23,7 +23,7 @@ Table of contents:
 
 ## Prerequisites
 
-- [Node.js 18 through 22](https://nodejs.org/en/)
+- [Node.js 20.19 or later](https://nodejs.org/en/)
 
 ## Installation
 

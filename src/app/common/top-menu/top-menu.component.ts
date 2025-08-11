@@ -1,16 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-    selector: 'app-top-menu',
-    templateUrl: './top-menu.component.html',
-    styleUrls: ['./top-menu.component.css'],
-    standalone: false
+  selector: "app-top-menu",
+  templateUrl: "./top-menu.component.html",
+  styleUrls: ["./top-menu.component.css"],
+  standalone: true,
 })
-export class TopMenuComponent implements OnInit {
-
-    constructor() { }
-
-    ngOnInit(): void {
-    }
-
-}
+export class TopMenuComponent {}
