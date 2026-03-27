@@ -18,7 +18,6 @@ import "flexmonster/lib/flexmonster.highcharts.js";
 export class WithHighchartsComponent {
   readonly pivot = viewChild.required<FlexmonsterPivot>("pivot");
   chartOptions: Highcharts.Options = {};
-  updateFlag: boolean = false;
 
   customizeToolbar(toolbar: Flexmonster.Toolbar) {
     toolbar.showShareReportTab = true;
@@ -36,11 +35,9 @@ export class WithHighchartsComponent {
       },
       (data: Flexmonster.GetDataValueObject) => {
         this.chartOptions = <Highcharts.Options>data;
-        this.updateFlag = true;
       },
       (data: Flexmonster.GetDataValueObject) => {
         this.chartOptions = <Highcharts.Options>data;
-        this.updateFlag = true;
       }
     );
   }
