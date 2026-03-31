@@ -12,7 +12,7 @@ addons:
   chrome: stable
 before_install:
 - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-- chromedriver --port=9515 &
+- npm install -g chromedriver
 before_script:
 - git clone https://github.com/flexmonster/framework-integration-testing.git
 - chmod +x ./framework-integration-testing/launchScripts/angular/angular.sh
