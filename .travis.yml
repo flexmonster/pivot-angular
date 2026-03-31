@@ -12,7 +12,7 @@ addons:
   chrome: stable
 before_install:
 - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-- CHROME_VERSION=$(google-chrome-stable --version | grep -oP '\d+\.\d+\.\d+\.\d+') && wget -q "https://storage.googleapis.com/chrome-for-testing-public/${CHROME_VERSION}/linux64/chromedriver-linux64.zip" -O /tmp/chromedriver.zip && unzip -j /tmp/chromedriver.zip "*/chromedriver" -d /tmp/ && sudo mv /tmp/chromedriver /usr/local/bin/chromedriver && sudo chmod +x /usr/local/bin/chromedriver
+- npm config set detect_chromedriver_version true
 before_script:
 - git clone https://github.com/flexmonster/framework-integration-testing.git
 - chmod +x ./framework-integration-testing/launchScripts/angular/angular.sh
