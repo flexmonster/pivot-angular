@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { TopMenuComponent } from "./common/top-menu/top-menu.component";
 import { SideMenuComponent } from "./common/side-menu/side-menu.component";
@@ -8,6 +8,7 @@ import { SideMenuComponent } from "./common/side-menu/side-menu.component";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
   imports: [RouterOutlet, TopMenuComponent, SideMenuComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true,
 })
 export class AppComponent {

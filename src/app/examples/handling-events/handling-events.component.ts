@@ -1,4 +1,4 @@
-import { Component, viewChild, ElementRef } from "@angular/core";
+import { Component, viewChild, ElementRef, ChangeDetectionStrategy } from "@angular/core";
 import { FlexmonsterPivot, FlexmonsterPivotModule } from "ngx-flexmonster";
 import { ToggleButtonComponent } from "../../common/toggle-button/toggle-button.component";
 import { DatePipe } from "@angular/common";
@@ -8,6 +8,7 @@ import { DatePipe } from "@angular/common";
   templateUrl: "./handling-events.component.html",
   styleUrls: ["./handling-events.component.css"],
   imports: [ToggleButtonComponent, FlexmonsterPivotModule, DatePipe],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true,
 })
 export class HandlingEventsComponent {
