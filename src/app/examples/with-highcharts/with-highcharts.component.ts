@@ -1,4 +1,4 @@
-import { Component, viewChild } from "@angular/core";
+import { Component, viewChild, signal } from "@angular/core";
 import { FlexmonsterPivot, FlexmonsterPivotModule } from "ngx-flexmonster";
 
 // Importing Highcharts
@@ -17,7 +17,7 @@ import "flexmonster/lib/flexmonster.highcharts.js";
 })
 export class WithHighchartsComponent {
   readonly pivot = viewChild.required<FlexmonsterPivot>("pivot");
-  chartOptions: Highcharts.Options = {};
+  readonly chartOptions = signal<Highcharts.Options>({});
 
   customizeToolbar(toolbar: Flexmonster.Toolbar) {
     toolbar.showShareReportTab = true;
@@ -34,10 +34,10 @@ export class WithHighchartsComponent {
         type: "spline",
       },
       (data: Flexmonster.GetDataValueObject) => {
-        this.chartOptions = <Highcharts.Options>data;
+        this.chartOptions.set(<Highcharts.Options>data);
       },
       (data: Flexmonster.GetDataValueObject) => {
-        this.chartOptions = <Highcharts.Options>data;
+        this.chartOptions.set(<Highcharts.Options>data);
       }
     );
   }

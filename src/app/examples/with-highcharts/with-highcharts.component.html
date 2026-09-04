@@ -22,7 +22,9 @@
 
 <div class="chart-container">
   <highcharts-chart
-    [options]="chartOptions"
+    [options]="chartOptions()"
+    [update]="true"
+    [oneToOne]="true"
     style="width: 100%; display: block;"
   />
 </div>
